@@ -65,47 +65,7 @@ function Navbar() {
         {/* Actions */}
         <div className="flex items-center gap-2 lg:order-3">
 
-          {/* Langue */}
-          <div className="relative">
-            <button
-              type="button"
-              onClick={() => {
-                setLanguageOpen(!languageOpen);
-                setMenuOpen(false);
-              }}
-              className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-blue-950 transition hover:bg-blue-50"
-              aria-expanded={languageOpen}
-            >
-              <Globe size={18} />
-              <span className="hidden xl:inline">{language}</span>
-              <ChevronDown
-                size={15}
-                className={`transition ${languageOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-
-            {languageOpen && (
-              <div className="absolute end-0 top-full mt-2 w-44 overflow-hidden rounded-xl border border-blue-100 bg-white p-2 shadow-xl">
-                {languages.map((item) => (
-                  <button
-                    key={item}
-                    type="button"
-                    onClick={() => {
-                      setLanguage(item);
-                      setLanguageOpen(false);
-                    }}
-                    className={`w-full rounded-lg px-3 py-2 text-left text-sm transition hover:bg-blue-50 ${
-                      language === item
-                        ? "font-semibold text-blue-700"
-                        : "text-gray-700"
-                    }`}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+          
 
           {/* Contact */}
           <Link

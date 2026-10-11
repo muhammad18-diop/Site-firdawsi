@@ -1,4 +1,5 @@
 import HeroHome from "../Components/HeroSection";
+import Expertises from "../Components/Expertise";
 
 
 function Home(){
@@ -8,6 +9,7 @@ function Home(){
     return(
         <div>
             <HeroHome />
+            <Expertises />
            
         </div>
     )
