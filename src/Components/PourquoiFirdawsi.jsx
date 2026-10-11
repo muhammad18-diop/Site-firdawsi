@@ -35,7 +35,7 @@ function PourquoiNousChoisir() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#123B5D] py-20 text-white md:py-28">
+    <section className="relative overflow-hidden bg-[#071D30] py-20 text-white md:py-28">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* En-tête */}
