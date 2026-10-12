@@ -26,10 +26,10 @@ function Footer() {
   ];
 
   const expertises = [
-    "Conseil et accompagnement",
-    "Solutions numériques",
-    "Stratégie et développement",
-    "Services aux entreprises",
+   "Services de Voyage et Billetterie",
+    "Conseil et Transaction Immobilière",
+    "Courtage et Solutions d'Assurance",
+    "Accompagnement et Conseil aux Entreprises",
   ];
 
   const socialLinks = [
@@ -135,7 +135,7 @@ function Footer() {
               {expertises.map((expertise) => (
                 <li key={expertise}>
                   <Link
-                    to="/expertises"
+                    to="/services"
                     className="group flex items-start gap-2 text-sm leading-6 text-gray-300 transition hover:text-sky-300"
                   >
                     <ChevronRight
