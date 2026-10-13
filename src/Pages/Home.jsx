@@ -7,6 +7,7 @@ import Immobilier from "../Components/Immobilier";
 import Temoignages from "../Components/Temoignages";
 import CTAContact from "../Components/CTAContact";
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
 
 
@@ -17,6 +18,7 @@ function Home(){
 
     return(
         <div>
+            <Navbar />
             <HeroHome />
             <Expertises />
             <PourquoiNousChoisir />

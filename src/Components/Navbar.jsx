@@ -23,7 +23,7 @@ function Navbar() {
   ];
 
   const links = [
-    { label: "Accueil", path: "/" },
+    { label: "Accueil", path: "/accueil" },
     { label: "À propos", path: "/about" },
     { label: "Services", path: "/services" },
     { label: "Partenaires", path: "/pricing" },

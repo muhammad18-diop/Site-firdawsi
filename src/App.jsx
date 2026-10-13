@@ -3,6 +3,8 @@ import {  Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
+import About from './Pages/About'
+import Welcome from './Components/Welcom'
 
 
 function App() {
@@ -10,11 +12,12 @@ function App() {
 
   return (
     <>
-      <Navbar />
+     
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<h1>À propos</h1>} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/accueil" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services" element={<h1>Services</h1>} />
         <Route path="/pricing" element={<h1>Tarifs</h1>} />
         <Route path="/contact" element={<h1>Contact</h1>} />

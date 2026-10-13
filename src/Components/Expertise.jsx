@@ -113,14 +113,14 @@ function Expertises() {
 
         {/* En-tête */}
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-semibold text-blue-800">
+          <span className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-semibold text-sky-600">
             <span className="h-2 w-2 rounded-full bg-sky-500" />
             Nos domaines d'expertise
           </span>
 
           <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-blue-950 md:text-5xl">
             Des expertises au service de vos{" "}
-            <span className="text-blue-600">
+            <span className="text-sky-600">
               ambitions.
             </span>
           </h2>
