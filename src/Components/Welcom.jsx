@@ -25,7 +25,7 @@ function Welcome() {
       setTimeout(() => {
         setIndex((ancienIndex) => (ancienIndex + 1) % langues.length);
         setVisible(true);
-      }, 150);
+      }, 250);
     }, 2500);
 
     return () => clearInterval(interval);
