@@ -53,12 +53,10 @@ function Navbar() {
             <span className="block text-sm font-extrabold tracking-wide text-blue-950 lg:text-base">
               FIRDAWSI
             </span>
-            <span className="block text-xs font-semibold tracking-wider text-blue-700">
+            <span className="block text-xs font-semibold tracking-wider text-sky-600">
               CONSULTING GROUP
             </span>
-            <span className="mt-1 block text-[9px] tracking-wider text-gray-500">
-              L’EXCELLENCE AU CŒUR DE VOS BESOINS
-            </span>
+           
           </div>
         </Link>
 
@@ -70,7 +68,7 @@ function Navbar() {
           {/* Contact */}
           <Link
             to="/contact"
-            className="hidden items-center gap-2 rounded-lg bg-blue-800 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-950 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-sky-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-950 sm:inline-flex"
           >
             Nous contacter
             <ArrowRight size={17} />
@@ -107,8 +105,8 @@ function Navbar() {
                   className={({ isActive }) =>
                     `block rounded-lg px-3 py-2 text-sm transition lg:px-0 lg:py-3 ${
                       isActive
-                        ? "bg-blue-100 font-bold text-blue-800 lg:bg-transparent lg:text-blue-700"
-                        : "text-blue-950 hover:bg-blue-100 lg:hover:bg-transparent lg:hover:text-blue-600"
+                        ? "bg-sky-100 font-bold text-blue-800 lg:bg-transparent lg:text-sky-600 underline lg:underline-offset-4"
+                        : "text-blue-950 hover:bg-blue-100 lg:hover:bg-transparent lg:hover:text-sky-600"
                     }`
                   }
                 >
@@ -122,7 +120,7 @@ function Navbar() {
           <Link
             to="/contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-blue-800 px-4 py-3 font-semibold text-white sm:hidden"
+            className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-sky-600 px-4 py-3 font-semibold text-white sm:hidden"
           >
             Nous contacter <ArrowRight size={17} />
           </Link>
