@@ -76,7 +76,7 @@ function AssuranceBiens() {
 
           <div className="relative grid grid-cols-1 items-center gap-10 p-8 md:p-12 lg:grid-cols-2 lg:p-16">
             <div>
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-400 text-[#123B5D]">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-300 text-[#123B5D]">
                 <ShieldCheck size={30} strokeWidth={1.8} />
               </div>
 
@@ -92,7 +92,7 @@ function AssuranceBiens() {
 
               <a
                 href="/contact"
-                className="mt-8 inline-flex items-center gap-3 rounded-lg bg-sky-400 px-6 py-3.5 text-sm font-bold text-[#123B5D] transition hover:bg-sky-300"
+                className="mt-8 inline-flex items-center gap-3 rounded-lg bg-sky-300 px-6 py-3.5 text-sm font-bold text-[#123B5D] transition hover:bg-sky-300"
               >
                 Demander des informations
                 <ArrowUpRight size={18} />

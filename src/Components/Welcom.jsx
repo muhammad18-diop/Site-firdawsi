@@ -41,7 +41,7 @@ function Welcome() {
         loop
         playsInline
         preload="auto"
-        poster="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85"
+
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/videos/aeroport.mp4" type="video/mp4" />
