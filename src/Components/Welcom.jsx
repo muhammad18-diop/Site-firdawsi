@@ -12,7 +12,6 @@ function Welcome() {
     "Willkommen bei",
     "Bem-vindo à",
     "مرحبًا بكم في",
-    "欢迎来到",
   ];
 
   const [index, setIndex] = useState(0);
