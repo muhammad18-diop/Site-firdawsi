@@ -105,8 +105,8 @@ function Navbar() {
                   className={({ isActive }) =>
                     `block rounded-lg px-3 py-2 text-sm transition lg:px-0 lg:py-3 ${
                       isActive
-                        ? "bg-sky-100 font-bold text-blue-800 lg:bg-transparent lg:text-sky-600 underline lg:underline-offset-4"
-                        : "text-blue-950 hover:bg-blue-100 lg:hover:bg-transparent lg:hover:text-sky-600"
+                        ? "bg-sky-100 font-bold text-sky-600 lg:bg-transparent lg:text-sky-600 underline lg:underline-offset-4"
+                        : "text-sky-650 hover:bg-sky-100 lg:hover:bg-transparent lg:hover:text-sky-600"
                     }`
                   }
                 >

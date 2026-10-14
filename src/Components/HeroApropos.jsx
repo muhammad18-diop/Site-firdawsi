@@ -99,7 +99,7 @@ function HeroApropos() {
         <div className="flex flex-col gap-4 sm:flex-row">
           <a
             href="#notre-histoire"
-            className="inline-flex items-center justify-center gap-3 rounded-lg bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg transition hover:bg-sky-500"
+            className="inline-flex items-center justify-center gap-3 rounded-lg bg-sky-600 px-7 py-4 font-semibold text-white shadow-lg transition hover:bg-sky-500"
           >
             Découvrir notre histoire
             <ArrowRight size={20} />
