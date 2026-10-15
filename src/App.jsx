@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Welcome from './Components/Welcom'
+import Services from './Pages/Services'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/accueil" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<h1>Services</h1>} />
+        <Route path="/services" element={<Services />} />
         <Route path="/pricing" element={<h1>Tarifs</h1>} />
         <Route path="/contact" element={<h1>Contact</h1>} />
       </Routes>
