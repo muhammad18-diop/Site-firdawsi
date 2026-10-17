@@ -8,6 +8,7 @@ function Services() {
         <Navbar />
         <HeroServices />
         <ServicesVoyage />
+       
     </div>
   );
 }

@@ -455,13 +455,13 @@ export default function VoyagesServices() {
             <label className="relative block">
               <span className="sr-only">Rechercher un pays ou un organisme</span>
               <Search size={19} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input
-                type="search"
-                value={recherche}
-                onChange={(e) => modifierRecherche(e.target.value)}
-                placeholder="Rechercher un pays..."
-                className="w-full border border-slate-200 bg-white py-3.5 pl-11 pr-4 text-sm outline-none transition placeholder:text-slate-400 focus:border-[#55B8E8] focus:ring-2 focus:ring-sky-100"
-              />
+             <input
+              type="search"
+               value={recherche}
+               onChange={(e) => modifierRecherche(e.target.value)}
+               placeholder="Rechercher un pays..."
+               className="w-full min-w-0 border border-slate-200 bg-white py-3.5 pl-11 pr-4 text-base outline-none transition placeholder:text-slate-400 focus:border-[#55B8E8] focus:ring-2 focus:ring-sky-100"
+               />
             </label>
             <label>
               <span className="sr-only">Filtrer par région</span>
