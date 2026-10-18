@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar";
 import HeroServices from "../Components/HeroService";
 import ServicesVoyage from "../Components/ServicesVoyage";
+import ImmobilierSection from "../Components/SectionImmo";
 
 function Services() {
   return (
@@ -8,6 +9,7 @@ function Services() {
         <Navbar />
         <HeroServices />
         <ServicesVoyage />
+        <ImmobilierSection />
        
     </div>
   );
