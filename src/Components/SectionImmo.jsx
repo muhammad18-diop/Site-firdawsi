@@ -353,7 +353,7 @@ export default function ImmobilierSection() {
             );
           })}
 
-          <div className="flex flex-col justify-between rounded-xl bg-[#123B5D] p-7 text-white shadow-xl lg:col-span-1">
+          <div className="flex flex-col justify-between rounded-xl bg-[#07243B] p-7 text-white shadow-xl lg:col-span-1">
             <div>
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-sky-300">
                 <BadgeCheck size={22} />
@@ -433,7 +433,7 @@ export default function ImmobilierSection() {
 
       {/* 5. APPEL À L'ACTION FINAL */}
       <section className="px-5 pb-16 sm:px-8 md:pb-24 lg:px-10">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl bg-[#08243B] px-8 py-12 sm:px-12 md:flex md:items-center md:justify-between md:gap-10 md:px-16 md:py-16">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl bg-[#07243B] px-8 py-12 sm:px-12 md:flex md:items-center md:justify-between md:gap-10 md:px-16 md:py-16">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full border-[40px] border-white/[0.04]"
