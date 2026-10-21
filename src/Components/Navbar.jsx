@@ -26,7 +26,6 @@ function Navbar() {
     { label: "Accueil", path: "/accueil" },
     { label: "À propos", path: "/about" },
     { label: "Services", path: "/services" },
-    { label: "Partenaires", path: "/pricing" },
     { label: "Actualités", path: "/actualite" },
     { label: "Témoignages", path: "/temoignages" },
     { label: "FAQ", path: "/faq" },
