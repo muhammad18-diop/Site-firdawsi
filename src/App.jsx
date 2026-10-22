@@ -8,6 +8,7 @@ import Welcome from './Components/Welcom'
 import Services from './Pages/Services'
 import Actualite from './Pages/Actualite'
 import Temoignages from './Pages/Temoignages'
+import FAQ from './Pages/FAQ'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/actualite" element={<Actualite />} />
         <Route path="/temoignages" element={<Temoignages />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<h1>Contact</h1>} />
       </Routes>
     </>
