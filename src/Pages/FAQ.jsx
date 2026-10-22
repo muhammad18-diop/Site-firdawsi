@@ -8,10 +8,10 @@ import Footer from "../Components/Footer";
 function FAQ() {
   return (
     <div>
-        <Navbar />
-      <HeroFAQ />
-        <SectionFAQ />
-        <Footer />
+     <Navbar />
+     <HeroFAQ />
+     <SectionFAQ />
+     <Footer />
     </div>
   );
 }
