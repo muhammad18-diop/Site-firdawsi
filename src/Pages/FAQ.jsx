@@ -1,7 +1,7 @@
 
 import Navbar from "../Components/Navbar";
 import HeroFAQ from "../Components/HeroFAQ";
-import SectionFAQ from "../Components/SectionFAQ";
+import SectionFaq from "../Components/SectionFaq"
 import Footer from "../Components/Footer";
 
 
