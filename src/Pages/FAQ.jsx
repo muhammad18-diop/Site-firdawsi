@@ -10,7 +10,7 @@ function FAQ() {
     <div>
      <Navbar />
      <HeroFAQ />
-     <SectionFAQ />
+     <SectionFaq />
      <Footer />
     </div>
   );
