@@ -10,6 +10,8 @@ import Actualite from './Pages/Actualite'
 import Temoignages from './Pages/Temoignages'
 import FAQ from './Pages/FAQ'
 import Contact from './Pages/Contact'
+import MentionsLegales from './Pages/MentionsLegales'
+import ConfidentialitePage from './Pages/Confidentialite'
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Route path="/temoignages" element={<Temoignages />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/mentions-legales" element={<MentionsLegales />} />
+      <Route path="/confidentialite" element={<ConfidentialitePage/>} />
     </Routes>
   )
 }

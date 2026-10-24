@@ -18,8 +18,8 @@ function Footer() {
   };
 
   const navigation = [
-    { nom: "Accueil", lien: "/" },
-    { nom: "À propos", lien: "/apropos" },
+    { nom: "Accueil", lien: "/accueil" },
+    { nom: "À propos", lien: "/about" },
     { nom: "Nos services", lien: "/services" },
     { nom: "FAQ", lien: "/faq" },
     { nom: "Contact", lien: "/contact" },
