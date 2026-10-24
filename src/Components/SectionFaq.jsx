@@ -256,37 +256,49 @@ export default function SectionFAQ() {
         </div>
 
         {/* Recherche corrigée pour mobile */}
-        <div className="mx-auto mb-8 w-full min-w-0 max-w-2xl">
-          <label htmlFor="faq-search" className="sr-only">
-            Rechercher une question
-          </label>
 
-          <div className="flex w-full min-w-0 items-center gap-3 overflow-hidden rounded-2xl border border-slate-200 bg-white px-3 py-3 shadow-sm transition focus-within:border-sky-400 focus-within:ring-4 focus-within:ring-sky-100 sm:px-4 sm:py-4">
-            <Search
-              className="shrink-0 text-slate-400"
-              size={21}
-            />
+        
+{/* Recherche mobile corrigée */}
+<div className="mx-auto mb-8 w-full max-w-2xl">
+  <label htmlFor="faq-search" className="sr-only">
+    Rechercher une question
+  </label>
 
-            <input
-              id="faq-search"
-              type="search"
-              value={search}
-              onChange={(event) => handleSearch(event.target.value)}
-              placeholder="Rechercher une question..."
-              className="block !w-0 min-w-0 max-w-full flex-1 border-0 bg-transparent p-0 text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:border-0 focus:outline-none focus:ring-0"
-            />
+  <div className="flex w-full items-center gap-3 rounded-2xl border border-slate-200 bg-white px-3 py-3 shadow-sm transition-colors focus-within:border-sky-400 sm:px-4 sm:py-4">
+    <Search
+      className="shrink-0 text-slate-400"
+      size={21}
+    />
 
-            {search && (
-              <button
-                type="button"
-                onClick={() => handleSearch("")}
-                className="shrink-0 whitespace-nowrap text-xs font-semibold text-slate-500 hover:text-[#071B3A]"
-              >
-                Effacer
-              </button>
-            )}
-          </div>
-        </div>
+    <input
+      id="faq-search"
+      type="search"
+      value={search}
+      onChange={(event) => handleSearch(event.target.value)}
+      placeholder="Rechercher une question..."
+      style={{
+        width: "100%",
+        minWidth: 0,
+        maxWidth: "100%",
+        fontSize: "16px",
+        transform: "none",
+        zoom: 1,
+      }}
+      className="flex-1 appearance-none border-0 bg-transparent p-0 text-base text-slate-700 outline-none placeholder:text-slate-400 focus:border-0 focus:outline-none focus:ring-0"
+    />
+
+    {search && (
+      <button
+        type="button"
+        onClick={() => handleSearch("")}
+        className="shrink-0 whitespace-nowrap text-xs font-semibold text-slate-500 hover:text-[#071B3A]"
+      >
+        Effacer
+      </button>
+    )}
+  </div>
+</div>
+
 
         {/* Catégories */}
         <div className="mb-12 flex flex-wrap justify-center gap-2 sm:gap-3">
