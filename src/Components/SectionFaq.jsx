@@ -149,10 +149,10 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between gap-5 py-5 text-left"
+        className="flex w-full items-center justify-between gap-4 py-5 text-left sm:gap-5"
       >
         <span
-          className={`text-sm font-semibold leading-6 transition-colors sm:text-base ${
+          className={`min-w-0 flex-1 text-sm font-semibold leading-6 transition-colors sm:text-base ${
             isOpen ? "text-sky-700" : "text-slate-800"
           }`}
         >
@@ -233,7 +233,7 @@ export default function SectionFAQ() {
       <div className="pointer-events-none absolute -right-40 top-24 h-80 w-80 rounded-full bg-sky-100/60 blur-3xl" />
       <div className="pointer-events-none absolute -left-40 bottom-20 h-80 w-80 rounded-full bg-slate-100/80 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+      <div className="relative mx-auto w-full min-w-0 max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* En-tête */}
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-100 bg-sky-50 px-4 py-2">
@@ -255,14 +255,17 @@ export default function SectionFAQ() {
           </p>
         </div>
 
-        {/* Recherche */}
-        <div className="mx-auto mb-8 max-w-2xl">
+        {/* Recherche corrigée pour mobile */}
+        <div className="mx-auto mb-8 w-full min-w-0 max-w-2xl">
           <label htmlFor="faq-search" className="sr-only">
             Rechercher une question
           </label>
 
-          <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm transition focus-within:border-sky-400 focus-within:ring-4 focus-within:ring-sky-100">
-            <Search className="shrink-0 text-slate-400" size={21} />
+          <div className="flex w-full min-w-0 items-center gap-3 overflow-hidden rounded-2xl border border-slate-200 bg-white px-3 py-3 shadow-sm transition focus-within:border-sky-400 focus-within:ring-4 focus-within:ring-sky-100 sm:px-4 sm:py-4">
+            <Search
+              className="shrink-0 text-slate-400"
+              size={21}
+            />
 
             <input
               id="faq-search"
@@ -270,14 +273,14 @@ export default function SectionFAQ() {
               value={search}
               onChange={(event) => handleSearch(event.target.value)}
               placeholder="Rechercher une question..."
-              className="w-full border-0 bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0"
+              className="block !w-0 min-w-0 max-w-full flex-1 border-0 bg-transparent p-0 text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:border-0 focus:outline-none focus:ring-0"
             />
 
             {search && (
               <button
                 type="button"
                 onClick={() => handleSearch("")}
-                className="shrink-0 text-xs font-semibold text-slate-500 hover:text-[#071B3A]"
+                className="shrink-0 whitespace-nowrap text-xs font-semibold text-slate-500 hover:text-[#071B3A]"
               >
                 Effacer
               </button>
@@ -310,13 +313,15 @@ export default function SectionFAQ() {
         </div>
 
         {/* Questions */}
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto w-full min-w-0 max-w-4xl">
           <div className="mb-6 flex items-center justify-between gap-4">
             <p className="text-sm text-slate-500">
               <span className="font-bold text-[#071B3A]">
                 {totalResults}
               </span>{" "}
-              {totalResults > 1 ? "questions trouvées" : "question trouvée"}
+              {totalResults > 1
+                ? "questions trouvées"
+                : "question trouvée"}
             </p>
 
             {activeCategory !== "Toutes" && (
@@ -346,7 +351,7 @@ export default function SectionFAQ() {
                         <Icon size={22} />
                       </div>
 
-                      <div>
+                      <div className="min-w-0">
                         <h3 className="text-lg font-bold text-[#071B3A] sm:text-xl">
                           {section.category}
                         </h3>
@@ -356,8 +361,8 @@ export default function SectionFAQ() {
                       </div>
                     </div>
 
-                    <div className="rounded-2xl border border-slate-200 bg-white px-5 shadow-sm sm:px-7">
-                      {section.questions.map((item, index) => {
+                    <div className="rounded-2xl border border-slate-200 bg-white px-4 shadow-sm sm:px-7">
+                      {section.questions.map((item) => {
                         const questionKey = `${section.category}-${item.question}`;
 
                         return (
@@ -368,7 +373,9 @@ export default function SectionFAQ() {
                             isOpen={openQuestion === questionKey}
                             onToggle={() =>
                               setOpenQuestion((previous) =>
-                                previous === questionKey ? null : questionKey
+                                previous === questionKey
+                                  ? null
+                                  : questionKey
                               )
                             }
                           />
@@ -381,7 +388,10 @@ export default function SectionFAQ() {
             </div>
           ) : (
             <div className="rounded-2xl border border-slate-200 bg-slate-50 px-6 py-12 text-center">
-              <Search className="mx-auto mb-4 text-slate-400" size={32} />
+              <Search
+                className="mx-auto mb-4 text-slate-400"
+                size={32}
+              />
 
               <h3 className="font-bold text-[#071B3A]">
                 Aucune question trouvée
@@ -431,7 +441,7 @@ export default function SectionFAQ() {
 
             <a
               href="/contact"
-              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-sky-400 px-6 py-4 text-sm font-bold text-[#071B3A] transition hover:bg-white"
+              className="inline-flex max-w-full shrink-0 items-center justify-center gap-3 rounded-xl bg-sky-400 px-5 py-4 text-sm font-bold text-[#071B3A] transition hover:bg-white sm:px-6"
             >
               Contacter notre équipe
               <ArrowRight size={18} />
