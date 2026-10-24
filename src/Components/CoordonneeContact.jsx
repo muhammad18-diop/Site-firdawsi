@@ -12,23 +12,23 @@ const contacts = [
   {
     title: "Téléphone",
     description: "Échangeons directement sur votre projet.",
-    value: "+221 XX XXX XX XX",
+    value: "+221 78 315 20 94",
     icon: Phone,
-    href: "tel:+221XXXXXXXXX",
+    href: "tel:+221783152094",
   },
   {
     title: "WhatsApp",
     description: "Une question ? Écrivez-nous directement.",
     value: "Discuter sur WhatsApp",
     icon: MessageCircle,
-    href: "https://wa.me/221XXXXXXXXX",
+    href: "https://wa.me/221783152094",
   },
   {
     title: "E-mail",
     description: "Transmettez-nous votre demande par écrit.",
-    value: "contact@votredomaine.com",
+    value: "firdawsicg@gmail.com",
     icon: Mail,
-    href: "mailto:contact@votredomaine.com",
+    href: "mailto:firdawsicg@gmail.com",
   },
 ];
 

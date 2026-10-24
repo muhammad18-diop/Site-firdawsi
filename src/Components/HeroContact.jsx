@@ -43,21 +43,21 @@ function HeroContact() {
       description: "Échangeons directement sur votre projet.",
       detail: "Appelez notre équipe",
       icon: Phone,
-      href: "tel:+221XXXXXXXXX",
+      href: "tel:+221783152094",
     },
     {
       title: "WhatsApp",
       description: "Contactez-nous simplement par message.",
       detail: "Écrire sur WhatsApp",
       icon: MessageCircle,
-      href: "https://wa.me/221XXXXXXXXX",
+      href: "https://wa.me/221783152094",
     },
     {
       title: "E-mail",
       description: "Envoyez-nous vos questions et demandes.",
       detail: "Nous écrire par e-mail",
       icon: Mail,
-      href: "mailto:contact@votredomaine.com",
+      href: "mailto:firdawsicg@gmail.com",
     },
   ];
 
@@ -161,79 +161,7 @@ function HeroContact() {
           </div>
 
           {/* Accès rapides aux contacts */}
-          <div
-            id="coordonnees-contact"
-            className="scroll-mt-24 rounded-2xl border border-white/15 bg-[#071B3A]/75 p-5 shadow-2xl backdrop-blur-md sm:p-7"
-          >
-            <div className="mb-7">
-              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-sky-300">
-                Restons en contact
-              </p>
-              <h2 className="text-2xl font-bold text-white sm:text-3xl">
-                Comment pouvons-nous vous aider ?
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-gray-300">
-                Choisissez le moyen de contact qui vous convient le mieux.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              {contactOptions.map((option) => {
-                const Icon = option.icon;
-
-                return (
-                  <a
-                    key={option.title}
-                    href={option.href}
-                    target={
-                      option.title === "WhatsApp" ? "_blank" : undefined
-                    }
-                    rel={
-                      option.title === "WhatsApp"
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 transition hover:border-sky-400/50 hover:bg-white/10"
-                  >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-sky-300 transition group-hover:bg-sky-500 group-hover:text-white">
-                      <Icon size={23} />
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <h3 className="font-bold text-white">
-                        {option.title}
-                      </h3>
-                      <p className="mt-1 text-sm leading-5 text-gray-300">
-                        {option.description}
-                      </p>
-                      <span className="mt-2 inline-block text-sm font-semibold text-sky-300">
-                        {option.detail}
-                      </span>
-                    </div>
-
-                    <ArrowRight
-                      size={19}
-                      className="shrink-0 text-gray-400 transition group-hover:translate-x-1 group-hover:text-sky-300"
-                    />
-                  </a>
-                );
-              })}
-            </div>
-
-            <div className="mt-6 border-t border-white/15 pt-5">
-              <p className="mb-4 text-sm leading-6 text-gray-300">
-                Vous préférez nous présenter votre demande en détail ?
-              </p>
-
-              <Link
-                to="/contact"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-white px-5 py-3.5 font-bold text-[#071B3A] transition hover:bg-sky-100"
-              >
-                Accéder au formulaire
-                <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
+          
         </div>
 
         {/* Navigation du diaporama */}

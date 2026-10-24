@@ -148,7 +148,7 @@ function NousTrouver() {
               rel="noreferrer"
               className="mt-12 inline-flex w-fit items-center gap-3 border-b border-sky-400 pb-3 text-sm font-semibold text-white transition hover:text-sky-300"
             >
-              <Navigation size={18} />
+              
               Ouvrir l’itinéraire
               <ArrowUpRight size={17} />
             </a>
