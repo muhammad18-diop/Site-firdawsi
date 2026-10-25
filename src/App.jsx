@@ -12,6 +12,7 @@ import FAQ from './Pages/FAQ'
 import Contact from './Pages/Contact'
 import MentionsLegales from './Pages/MentionsLegales'
 import ConfidentialitePage from './Pages/Confidentialite'
+import Voyage from './Pages/Voyage'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/mentions-legales" element={<MentionsLegales />} />
       <Route path="/confidentialite" element={<ConfidentialitePage/>} />
+      <Route path="/services/voyages" element={<Voyage/>} />
     </Routes>
   )
 }

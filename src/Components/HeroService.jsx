@@ -127,37 +127,7 @@ function HeroServices() {
           </a>
         </div>
 
-        {/* Présentation des services */}
-        <div
-          id="services"
-          className="mt-14 grid max-w-4xl grid-cols-1 gap-4 border-t border-white/20 pt-8 sm:grid-cols-3"
-        >
-          {services.map((service) => {
-            const Icon = service.icon;
-
-            return (
-              <a
-                key={service.title}
-                href={service.link}
-                className="group flex items-start gap-4 rounded-xl p-3 transition duration-300 hover:bg-white/10"
-              >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-sky-400/40 bg-sky-400/10 text-sky-300 transition group-hover:bg-sky-500 group-hover:text-white">
-                  <Icon size={25} strokeWidth={1.7} />
-                </div>
-
-                <div>
-                  <h2 className="mb-2 font-bold text-white transition group-hover:text-sky-300">
-                    {service.title}
-                  </h2>
-
-                  <p className="text-sm leading-6 text-gray-300">
-                    {service.description}
-                  </p>
-                </div>
-              </a>
-            );
-          })}
-        </div>
+        
 
         {/* Navigation du diaporama */}
         <div className="mt-8 flex items-center gap-3">

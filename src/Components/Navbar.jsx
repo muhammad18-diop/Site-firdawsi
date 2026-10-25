@@ -43,7 +43,7 @@ function Navbar() {
           className="flex shrink-0 items-center gap-3"
         >
           <img
-            src="firdawsi-bg.png"
+            src="/firdawsi-bg.png"
             alt="Logo Firdawsi Consulting Group"
             className="h-14 w-16 object-contain sm:h-16 sm:w-20"
           />

@@ -23,8 +23,8 @@ function Home(){
             <Expertises />
             <PourquoiNousChoisir />
             <Destinations />
-            <AssuranceBiens />
             <Immobilier />
+            <AssuranceBiens />
             <Temoignages />
             <CTAContact />
             <Footer />
