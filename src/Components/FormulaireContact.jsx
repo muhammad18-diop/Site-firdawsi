@@ -279,7 +279,7 @@ export default function FormulaireContact() {
                   maxLength={254}
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="vous@exemple.com"
+                  placeholder="firdawsicg@gmail.com"
                   aria-invalid={Boolean(errors.email)}
                   className={`${inputClass} pl-11 ${
                     errors.email ? "border-red-500" : ""
@@ -316,7 +316,7 @@ export default function FormulaireContact() {
                   maxLength={15}
                   value={form.telephone}
                   onChange={handleChange}
-                  placeholder="Ex. : 771234567"
+                  placeholder="775644777"
                   aria-invalid={Boolean(errors.telephone)}
                   aria-describedby={
                     errors.telephone
@@ -402,7 +402,7 @@ export default function FormulaireContact() {
                 maxLength={150}
                 value={form.sujet}
                 onChange={handleChange}
-                placeholder="Ex. : Demande de renseignements"
+                placeholder="Demande de renseignements"
                 aria-invalid={Boolean(errors.sujet)}
                 className={`${inputClass} ${
                   errors.sujet ? "border-red-500" : ""
