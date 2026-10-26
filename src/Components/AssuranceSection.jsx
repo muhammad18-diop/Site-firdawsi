@@ -1,7 +1,6 @@
 
 import {
   ArrowRight,
-  ArrowUpRight,
   CheckCircle2,
   CarFront,
   Plane,
@@ -12,261 +11,231 @@ import {
   HeartPulse,
   GraduationCap,
   BriefcaseBusiness,
-  ShieldCheck,
-  MessageCircle,
-  LifeBuoy,
 } from "lucide-react";
 
-const servicesAssistance = [
+const assurances = [
   {
     id: "automobile",
     numero: "01",
-    categorie: "Assistance automobile",
-    titre: "Prenez la route avec plus de sérénité.",
+    titre: "Assurance automobile",
     description:
-      "Votre véhicule est essentiel à vos déplacements. FIRDAWSI vous accompagne dans la recherche de solutions d'assistance adaptées à vos besoins, notamment en cas de panne, d'immobilisation ou d'incident sur la route.",
-    points: [
-      "Orientation en cas de panne ou d'incident",
-      "Recherche de solutions de dépannage et de remorquage",
-      "Accompagnement dans vos démarches d'assistance",
+      "Protégez votre véhicule grâce à une couverture adaptée à son utilisation et à vos besoins.",
+    avantages: [
+      "Solutions adaptées à votre véhicule",
+      "Garanties selon votre profil et votre budget",
+      "Accompagnement dans vos démarches",
     ],
     image:
       "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Véhicule sur une route",
     icon: CarFront,
   },
   {
     id: "voyage",
     numero: "02",
-    categorie: "Assistance voyage",
-    titre: "Voyagez l'esprit plus tranquille.",
+    titre: "Assurance voyage",
     description:
-      "Un imprévu peut survenir avant ou pendant un déplacement. Nous vous orientons vers des solutions adaptées à votre destination et à votre situation afin de préparer votre voyage dans de meilleures conditions.",
-    points: [
-      "Orientation vers des solutions d'assistance voyage",
-      "Informations sur les garanties et les démarches",
-      "Accompagnement selon votre destination et vos besoins",
+      "Préparez vos déplacements avec une couverture pensée pour les imprévus pouvant survenir avant ou pendant votre voyage.",
+    avantages: [
+      "Solutions adaptées à votre destination",
+      "Garanties selon le contrat souscrit",
+      "Accompagnement dans la préparation de votre dossier",
     ],
     image:
       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Avion en vol dans le ciel",
     icon: Plane,
   },
   {
     id: "habitation",
     numero: "03",
-    categorie: "Assistance habitation",
-    titre: "Protégez votre foyer et vos biens.",
+    titre: "Assurance habitation",
     description:
-      "Votre logement mérite une attention particulière. FIRDAWSI vous accompagne dans l'identification de solutions adaptées pour mieux protéger votre habitation et faire face aux imprévus susceptibles d'affecter votre domicile.",
-    points: [
-      "Orientation vers des solutions de protection du logement",
-      "Informations sur les risques et garanties possibles",
-      "Accompagnement dans vos démarches en cas de sinistre",
+      "Préservez votre logement et vos biens grâce à des garanties adaptées à votre situation, que vous soyez propriétaire ou locataire.",
+    avantages: [
+      "Protection des biens selon le contrat",
+      "Garanties adaptées à votre logement",
+      "Conseils pour choisir votre couverture",
     ],
     image:
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Maison moderne entourée de verdure",
     icon: House,
   },
   {
     id: "chantier",
     numero: "04",
-    categorie: "Assistance chantier",
-    titre: "Sécurisez vos projets de construction.",
+    titre: "Assurance chantier",
     description:
-      "Les travaux de construction comportent des risques humains, matériels et financiers. Nous vous accompagnons dans l'identification des solutions de protection pertinentes pour votre chantier, selon la nature de votre projet.",
-    points: [
-      "Orientation sur les risques liés au chantier",
-      "Recherche de solutions de protection adaptées",
-      "Accompagnement dans la compréhension des garanties",
+      "Anticipez les risques liés à vos travaux et projets de construction avec des solutions adaptées à la nature du chantier.",
+    avantages: [
+      "Étude des risques du projet",
+      "Garanties à définir selon les travaux",
+      "Accompagnement dans le choix du contrat",
     ],
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Plans d'architecture pour un projet de construction",
     icon: HardHat,
   },
   {
     id: "incendie",
     numero: "05",
-    categorie: "Assistance incendie",
-    titre: "Anticipez les risques pour mieux protéger vos biens.",
+    titre: "Assurance incendie",
     description:
-      "Un incendie peut avoir des conséquences importantes sur un logement, un commerce ou une entreprise. FIRDAWSI vous oriente vers des solutions de couverture adaptées aux risques et aux biens que vous souhaitez protéger.",
-    points: [
-      "Orientation vers les garanties incendie disponibles",
-      "Prise en compte des biens et locaux à protéger",
-      "Accompagnement dans les démarches liées à un sinistre",
+      "Protégez vos biens immobiliers et vos équipements contre les risques couverts par votre contrat, notamment les dommages liés à un incendie.",
+    avantages: [
+      "Évaluation des biens à assurer",
+      "Garanties selon votre situation",
+      "Conseils sur les niveaux de couverture",
     ],
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Immeuble professionnel en milieu urbain",
     icon: Flame,
   },
   {
     id: "transport",
     numero: "06",
-    categorie: "Assistance transport",
-    titre: "Accompagnez vos déplacements et vos marchandises.",
+    titre: "Assurance transport",
     description:
-      "Le transport de personnes et de marchandises nécessite une préparation adaptée aux risques. Nous vous aidons à identifier les solutions de protection correspondant à votre activité et à la nature de vos transports.",
-    points: [
-      "Orientation pour le transport de marchandises",
-      "Recherche de solutions adaptées à votre activité",
-      "Informations sur les garanties et les responsabilités",
+      "Sécurisez vos opérations de transport en étudiant les solutions adaptées aux marchandises, aux véhicules et aux risques de votre activité.",
+    avantages: [
+      "Solutions selon le type de transport",
+      "Étude des marchandises et des risques",
+      "Garanties adaptées à votre activité",
     ],
     image:
       "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Camion de transport de marchandises sur la route",
     icon: Truck,
   },
   {
     id: "maladie-accident",
     numero: "07",
-    categorie: "Assistance maladie et accident",
-    titre: "Votre santé et votre sécurité comptent.",
+    titre: "Assurance maladie et accident",
     description:
-      "Face à une maladie ou à un accident, disposer d'une protection adaptée peut faire la différence. FIRDAWSI vous oriente vers des solutions d'assistance et de couverture à étudier selon votre situation personnelle ou professionnelle.",
-    points: [
-      "Orientation vers des solutions de couverture santé",
-      "Recherche de protections contre les conséquences d'un accident",
-      "Informations sur les garanties et leurs conditions",
+      "Découvrez les solutions de couverture santé et accident correspondant à votre situation personnelle ou familiale.",
+    avantages: [
+      "Solutions selon vos besoins",
+      "Couverture selon le contrat choisi",
+      "Accompagnement dans le choix des garanties",
     ],
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Professionnel de santé dans un environnement médical",
     icon: HeartPulse,
   },
   {
     id: "scolaire",
     numero: "08",
-    categorie: "Assistance scolaire",
-    titre: "Contribuez à la protection de vos enfants à l'école.",
+    titre: "Assurance scolaire",
     description:
-      "La vie scolaire comporte des activités et des déplacements qui peuvent exposer les élèves à certains risques. Nous vous accompagnons dans la recherche de solutions adaptées pour mieux protéger les enfants durant leur parcours scolaire.",
-    points: [
-      "Orientation vers des solutions de protection scolaire",
-      "Informations sur les accidents et responsabilités couverts",
-      "Accompagnement dans la compréhension des garanties",
+      "Contribuez à la protection des élèves avec une assurance adaptée aux exigences de leur établissement et aux garanties recherchées.",
+    avantages: [
+      "Solutions pour les élèves et étudiants",
+      "Garanties à vérifier selon l’établissement",
+      "Accompagnement dans les démarches",
     ],
     image:
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Élèves dans une salle de classe",
     icon: GraduationCap,
   },
   {
     id: "multirisque-professionnelle",
     numero: "09",
-    categorie: "Multirisque professionnelle",
-    titre: "Protégez votre activité et votre outil de travail.",
+    titre: "Assurance multirisque professionnelle",
     description:
-      "Un commerce, un bureau ou une entreprise doit pouvoir faire face aux imprévus. FIRDAWSI vous accompagne dans l'identification des risques de votre activité et dans la recherche d'une couverture adaptée à vos locaux, équipements et responsabilités.",
-    points: [
-      "Étude des besoins de protection de votre activité",
-      "Orientation vers des garanties adaptées aux locaux et équipements",
-      "Accompagnement dans la compréhension des risques professionnels",
+      "Identifiez les solutions adaptées aux risques liés à vos locaux, à vos équipements et à votre activité professionnelle.",
+    avantages: [
+      "Analyse des risques professionnels",
+      "Protection à adapter à votre activité",
+      "Garanties selon le contrat souscrit",
     ],
     image:
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Espace de travail professionnel moderne",
     icon: BriefcaseBusiness,
   },
 ];
 
-function ServiceAssistance({ service, index }) {
-  const Icon = service.icon;
+function AssuranceItem({ assurance, index }) {
+  const Icon = assurance.icon;
   const imageAGauche = index % 2 === 1;
 
   return (
     <article
-      id={service.id}
-      className="scroll-mt-28 border-b border-slate-200 py-16 last:border-b-0 md:py-24"
+      id={assurance.id}
+      className="scroll-mt-28 border-b border-slate-200 py-12 last:border-b-0 md:py-16"
     >
       <div
-        className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
-          imageAGauche ? "lg:[&>*:first-child]:order-2" : ""
+        className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${
+          imageAGauche
+            ? "lg:[&>div:first-child]:order-2"
+            : ""
         }`}
       >
-        {/* Visuel du service */}
-        <div className="relative">
-          <div className="absolute -bottom-4 -left-4 h-28 w-28 bg-sky-100 md:-bottom-5 md:-left-5" />
+        {/* Image */}
+        <div className="group relative min-h-[280px] overflow-hidden rounded-2xl bg-slate-100 sm:min-h-[360px]">
+          <img
+            src={assurance.image}
+            alt={assurance.titre}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
 
-          <div className="relative overflow-hidden bg-slate-100">
-            <img
-              src={service.image}
-              alt={service.imageAlt}
-              loading="lazy"
-              className="h-[300px] w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-[380px] lg:h-[440px]"
-            />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071D30]/80 via-transparent to-transparent" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071D30]/75 via-transparent to-transparent" />
-
-            <div className="absolute bottom-5 left-5 flex items-center gap-3 text-white md:bottom-7 md:left-7">
-              <div className="flex h-12 w-12 items-center justify-center bg-white text-[#123B5D]">
-                <Icon size={25} strokeWidth={1.7} />
-              </div>
-
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
-                  FIRDAWSI
-                </p>
-                <p className="text-sm font-medium">
-                  {service.categorie}
-                </p>
-              </div>
-            </div>
+          <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#123B5D] shadow-sm">
+            <Icon size={24} strokeWidth={1.7} />
           </div>
 
-          <div className="absolute -right-3 -top-4 z-10 flex h-16 w-16 items-center justify-center border-4 border-white bg-[#123B5D] text-xl font-bold text-white md:-right-5 md:-top-5 md:h-20 md:w-20 md:text-2xl">
-            {service.numero}
+          <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-white">
+            <h3 className="max-w-md text-2xl font-bold sm:text-3xl">
+              {assurance.titre}
+            </h3>
+
+            <span className="text-4xl font-light text-white/70">
+              {assurance.numero}
+            </span>
           </div>
         </div>
 
-        {/* Présentation du service */}
-        <div className="relative z-10">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-10 bg-sky-500" />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700">
-              {service.categorie}
-            </span>
-          </div>
-
-          <h2 className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-4xl xl:text-[42px]">
-            {service.titre}
-          </h2>
-
-          <p className="mt-6 text-base leading-8 text-slate-600">
-            {service.description}
+        {/* Contenu */}
+        <div className="py-2">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#123B5D]">
+            Nos solutions d’assurance
           </p>
 
-          <div className="my-8 h-px w-full bg-slate-200" />
+          <h2 className="mb-5 text-3xl font-bold leading-tight text-[#123B5D] sm:text-4xl">
+            {assurance.titre}
+          </h2>
 
-          <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#123B5D]">
-            Notre accompagnement
-          </h3>
+          <p className="mb-7 text-base leading-8 text-gray-600">
+            {assurance.description}
+          </p>
 
-          <ul className="space-y-4">
-            {service.points.map((point) => (
-              <li key={point} className="flex items-start gap-3">
-                <CheckCircle2
-                  size={20}
-                  className="mt-0.5 shrink-0 text-sky-600"
-                />
-                <span className="text-sm leading-6 text-slate-600">
-                  {point}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <div className="mb-8">
+            <h4 className="mb-4 font-semibold text-[#123B5D]">
+              Nos solutions pour vous
+            </h4>
+
+            <ul className="space-y-3">
+              {assurance.avantages.map((avantage) => (
+                <li
+                  key={avantage}
+                  className="flex items-start gap-3 text-sm leading-6 text-gray-600 sm:text-base"
+                >
+                  <CheckCircle2
+                    size={19}
+                    className="mt-0.5 shrink-0 text-[#123B5D]"
+                  />
+                  <span>{avantage}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <a
-            href={`/contact?service=${service.id}`}
-            className="group mt-9 inline-flex w-full items-center justify-between gap-4 border border-[#123B5D] px-5 py-4 text-sm font-semibold text-[#123B5D] transition-all duration-300 hover:bg-[#123B5D] hover:text-white sm:w-auto sm:min-w-[280px]"
+            href={`/contact?service=${assurance.id}`}
+            className="group inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-6 py-3.5 font-semibold text-white transition hover:bg-[#0B2B46]"
           >
-            <span>Demander des informations</span>
-            <ArrowUpRight
-              size={19}
-              className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            Demander des informations
+            <ArrowRight
+              size={18}
+              className="transition-transform group-hover:translate-x-1"
             />
           </a>
         </div>
@@ -275,94 +244,78 @@ function ServiceAssistance({ service, index }) {
   );
 }
 
-export default function AssistanceServices() {
+export default function AssuranceServices() {
   return (
-    <section id="services-assistance" className="overflow-hidden bg-white">
-      {/* En-tête */}
-      <div className="bg-slate-50 px-5 py-16 sm:px-8 md:py-24">
+    <main className="bg-white">
+      {/* Introduction de la section */}
+      <section
+        id="nos-assurances"
+        className="px-5 py-12 sm:px-8 sm:py-16 lg:py-20"
+      >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-            <div>
-              <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-10 bg-sky-500" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700">
-                  Nos solutions d'assistance
-                </span>
-              </div>
-
-              <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-5xl lg:text-6xl">
-                Une protection adaptée
-                <span className="mt-2 block text-sky-600">
-                  à chaque besoin.
-                </span>
-              </h1>
-            </div>
-
-            <div className="lg:pb-2">
-              <p className="max-w-xl text-base leading-8 text-slate-600">
-                Automobile, voyage, habitation, chantier, incendie,
-                transport, santé, scolaire et protection professionnelle :
-                FIRDAWSI CONSULTING GROUP vous accompagne dans la recherche
-                de solutions adaptées à votre situation.
-              </p>
-
-              <a
-                href="/contact"
-                className="mt-6 inline-flex items-center gap-3 text-sm font-bold text-[#123B5D] transition-colors hover:text-sky-600"
-              >
-                Échanger avec notre équipe
-                <ArrowRight size={18} />
-              </a>
-            </div>
+          <div className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#123B5D]">
+            <span className="h-px w-8 bg-[#8EC9F0]" />
+            Nos domaines d’assurance
           </div>
 
-          {/* Navigation rapide */}
-       
-        </div>
-      </div>
-
-      {/* Présentation détaillée des neuf services */}
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        {servicesAssistance.map((service, index) => (
-          <ServiceAssistance
-            key={service.id}
-            service={service}
-            index={index}
-          />
-        ))}
-      </div>
-
-      {/* Appel à l'action */}
-      <div className="bg-[#071D30] px-5 py-16 sm:px-8 md:py-20">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="h-px w-10 bg-sky-400" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-300">
-                Votre tranquillité, notre priorité
-              </span>
-            </div>
-
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
-              Besoin d'une solution d'assistance ?
+          <div className="mb-6 grid gap-5 md:grid-cols-[1fr_0.7fr] md:items-end">
+            <h2 className="max-w-2xl text-3xl font-bold leading-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
+              Des solutions pour vos biens, votre famille et votre entreprise.
             </h2>
 
-            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
-              Parlons de votre situation. Notre équipe vous aidera à
-              identifier les solutions à étudier selon vos besoins.
+            <p className="leading-7 text-gray-600">
+              Chaque besoin est différent. Découvrez nos solutions d’assurance
+              et contactez notre équipe pour être orienté vers une couverture
+              adaptée à votre situation.
             </p>
           </div>
 
-          <a
-            href="/contact"
-            className="inline-flex shrink-0 items-center justify-center gap-3 bg-sky-500 px-7 py-4 text-sm font-bold text-white transition-colors hover:bg-sky-600"
-          >
-            <MessageCircle size={19} />
-            Contacter FIRDAWSI
-            <ArrowRight size={18} />
-          </a>
+          <div className="mt-8">
+            {assurances.map((assurance, index) => (
+              <AssuranceItem
+                key={assurance.id}
+                assurance={assurance}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Appel à l'action final */}
+      <section className="px-5 pb-16 sm:px-8 sm:pb-20">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl bg-[#071D30] px-6 py-10 text-white sm:px-10 sm:py-14 lg:px-14">
+          <div className="absolute -right-10 -top-20 h-64 w-64 rounded-full bg-[#8EC9F0]/20 blur-3xl" />
+
+          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
+            <div className="max-w-2xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#8EC9F0]">
+                FIRDAWSI CONSULTING GROUP
+              </p>
+
+              <h2 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">
+                Votre protection, notre priorité.
+              </h2>
+
+              <p className="leading-7 text-white/80">
+                Vous ne savez pas quelle assurance choisir ? Présentez-nous
+                votre besoin et échangeons sur les solutions envisageables.
+              </p>
+            </div>
+
+            <a
+              href="/contact"
+              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-lg bg-white px-6 py-4 font-semibold text-[#123B5D] transition hover:bg-[#8EC9F0]"
+            >
+              Parlons de vos besoins
+              <ArrowRight
+                size={19}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
