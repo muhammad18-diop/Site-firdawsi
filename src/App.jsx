@@ -14,6 +14,7 @@ import MentionsLegales from './Pages/MentionsLegales'
 import ConfidentialitePage from './Pages/Confidentialite'
 import Voyage from './Pages/Voyage'
 import ImmobilierPage from './Pages/Immobilier'
+import Assistance from './Pages/Assisatance'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Route path="/confidentialite" element={<ConfidentialitePage/>} />
       <Route path="/services/voyages" element={<Voyage/>} />
       <Route path="/services/immobilier" element={<ImmobilierPage/>} />
+      <Route path="/services/assurance" element={<  Assistance/>} />
     </Routes>
   )
 }

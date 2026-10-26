@@ -1,319 +1,310 @@
 
 import {
-  House,
-  KeyRound,
-  MapPinned,
-  Building2,
-  ClipboardCheck,
-  ChartNoAxesCombined,
+  ArrowRight,
   ArrowUpRight,
   CheckCircle2,
-  ArrowRight,
+  KeyRound,
+  House,
+  MessageCircle,
+  HardHat,
+  ShieldCheck,
+  ClipboardCheck,
+  Building2,
 } from "lucide-react";
 
-const prestationsImmobilier = [
-  {
-    id: "achat-vente",
-    numero: "01",
-    categorie: "Achat & vente",
-    titre: "Trouvez le bien immobilier qui correspond à vos ambitions",
-    description:
-      "Vous souhaitez acheter votre première maison, acquérir un appartement ou vendre un bien ? Nous vous accompagnons dans la définition de vos besoins et la recherche d'une solution adaptée à votre projet.",
-    avantages: [
-      "Recherche selon vos critères et votre budget",
-      "Accompagnement dans les différentes étapes",
-      "Orientation dans la préparation du dossier",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
-    alt: "Maison contemporaine avec jardin",
-    Icon: House,
-    lien: "/contact?service=achat-vente",
-    bouton: "Parler de mon projet",
-  },
+const servicesImmobiliers = [
   {
     id: "location",
-    numero: "02",
+    numero: "01",
     categorie: "Location immobilière",
-    titre: "Le logement adapté à votre mode de vie",
+    titre: "Trouvez un espace qui vous ressemble.",
     description:
-      "Appartement, maison ou espace professionnel : nous vous accompagnons dans la recherche d'un bien correspondant à votre situation, à votre localisation préférée et à votre budget.",
-    avantages: [
-      "Recherche selon vos besoins",
-      "Prise en compte de votre budget",
-      "Orientation dans les démarches locatives",
+      "Vous recherchez un appartement, une maison ou un local professionnel ? FIRDAWSI vous accompagne dans votre recherche afin de trouver un bien adapté à vos besoins, à votre mode de vie et à votre budget.",
+    points: [
+      "Recherche de biens selon vos critères",
+      "Organisation des visites",
+      "Accompagnement dans les démarches locatives",
     ],
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-    alt: "Intérieur élégant d'un appartement moderne",
-    Icon: KeyRound,
-    lien: "/contact?service=location",
-    bouton: "Trouver un logement",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Maison moderne proposée à la location",
+    icon: KeyRound,
+    label: "Découvrir nos solutions de location",
   },
   {
-    id: "terrains",
+    id: "vente",
+    numero: "02",
+    categorie: "Vente immobilière",
+    titre: "Achetez ou vendez en toute confiance.",
+    description:
+      "Que vous souhaitiez acquérir un bien immobilier ou vendre votre propriété, nous vous accompagnons à chaque étape. Notre objectif est de faciliter votre démarche et de vous aider à avancer avec une meilleure visibilité sur votre projet.",
+    points: [
+      "Recherche de biens correspondant à votre projet d'achat",
+      "Mise en relation entre acheteurs et vendeurs",
+      "Accompagnement tout au long de la transaction",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Intérieur contemporain d'une propriété immobilière",
+    icon: House,
+    label: "Parlons de votre projet immobilier",
+  },
+  {
+    id: "consultance",
     numero: "03",
-    categorie: "Terrains & foncier",
-    titre: "Donnez vie à votre projet de construction",
+    categorie: "Consultance immobilière",
+    titre: "Prenez les bonnes décisions pour votre projet.",
     description:
-      "Vous recherchez un terrain pour construire votre maison ou préparer un investissement ? Nous vous accompagnons dans la définition de vos critères et l'orientation de vos démarches.",
-    avantages: [
-      "Recherche selon la zone souhaitée",
-      "Prise en compte de votre budget et de votre projet",
-      "Orientation vers les vérifications à effectuer avant l'achat",
+      "Un projet immobilier nécessite réflexion, préparation et conseils adaptés. FIRDAWSI vous aide à clarifier vos besoins, à étudier les possibilités et à identifier les solutions cohérentes avec vos objectifs.",
+    points: [
+      "Conseils adaptés à votre situation",
+      "Orientation dans vos démarches immobilières",
+      "Accompagnement dans l'étude de votre projet",
     ],
     image:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
-    alt: "Terrain dégagé dans un environnement naturel",
-    Icon: MapPinned,
-    lien: "/contact?service=terrains-foncier",
-    bouton: "Rechercher un terrain",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Professionnels préparant un projet autour d'une table",
+    icon: ClipboardCheck,
+    label: "Demander un accompagnement",
   },
   {
-    id: "gestion-locative",
+    id: "construction",
     numero: "04",
-    categorie: "Gestion locative",
-    titre: "Valorisez votre bien et simplifiez sa gestion",
+    categorie: "Construction",
+    titre: "Donnez vie à votre projet de construction.",
     description:
-      "Propriétaire d'un appartement, d'une maison ou d'un immeuble ? Découvrez un accompagnement adapté à vos besoins pour faciliter le suivi de votre bien et de sa location.",
-    avantages: [
-      "Orientation sur les besoins de gestion du bien",
-      "Accompagnement dans le suivi locatif",
-      "Recherche de solutions adaptées aux propriétaires",
+      "Vous envisagez de construire une maison ou un bâtiment ? Nous vous accompagnons dans la préparation de votre projet et dans l'identification des démarches et des interlocuteurs nécessaires à sa réalisation.",
+    points: [
+      "Écoute et clarification de vos besoins",
+      "Orientation dans la préparation du projet",
+      "Accompagnement dans les différentes étapes",
     ],
     image:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
-    alt: "Maison résidentielle avec espaces extérieurs",
-    Icon: Building2,
-    lien: "/contact?service=gestion-locative",
-    bouton: "Parler de mon bien",
-  },
-  {
-    id: "accompagnement",
-    numero: "05",
-    categorie: "Conseil immobilier",
-    titre: "Avancez dans votre projet avec une vision plus claire",
-    description:
-      "Un projet immobilier demande de la préparation. Nous vous aidons à clarifier vos besoins, à identifier les prochaines étapes et à mieux organiser vos démarches selon votre objectif.",
-    avantages: [
-      "Échange autour de votre projet",
-      "Identification des étapes à anticiper",
-      "Orientation selon votre situation",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
-    alt: "Documents et notes préparés sur un bureau",
-    Icon: ClipboardCheck,
-    lien: "/contact?service=conseil-immobilier",
-    bouton: "Demander un accompagnement",
-  },
-  {
-    id: "investissement",
-    numero: "06",
-    categorie: "Investissement immobilier",
-    titre: "Réfléchissez à votre prochain investissement immobilier",
-    description:
-      "Vous envisagez d'investir dans un terrain, un appartement ou un bien locatif ? Nous vous accompagnons dans la clarification de vos objectifs et la recherche d'options cohérentes avec votre projet.",
-    avantages: [
-      "Définition de vos objectifs immobiliers",
-      "Recherche selon vos critères et votre budget",
-      "Orientation sur les points à examiner avant de décider",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-    alt: "Immeubles modernes dans un quartier urbain",
-    Icon: ChartNoAxesCombined,
-    lien: "/contact?service=investissement-immobilier",
-    bouton: "Étudier mon projet",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Projet architectural et construction de bâtiment",
+    icon: HardHat,
+    label: "Étudions votre projet de construction",
   },
 ];
 
-export default function ImmobilierServices() {
+function ServiceImmobilier({ service, index }) {
+  const Icon = service.icon;
+  const imageAGauche = index % 2 === 1;
+
   return (
-    <main className="overflow-hidden bg-white text-slate-800">
-      {/* Présentation */}
-      <section className="px-6 pb-16 pt-16 sm:pt-20 lg:px-10 lg:pb-24">
-        <div className="mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
-            <span className="h-px w-8 bg-sky-500" />
-            Nos services immobiliers
-            <span className="h-px w-8 bg-sky-500" />
-          </span>
+    <article
+      id={service.id}
+      className="scroll-mt-28 border-b border-slate-200 py-16 md:py-24 last:border-b-0"
+    >
+      <div
+        className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+          imageAGauche ? "lg:[&>*:first-child]:order-2" : ""
+        }`}
+      >
+        {/* Image du service */}
+        <div className="relative">
+          <div className="absolute -bottom-4 -left-4 h-28 w-28 rounded-sm bg-sky-100 md:-bottom-5 md:-left-5" />
 
-          <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
-            Votre projet immobilier mérite un accompagnement à la hauteur.
-          </h2>
+          <div className="relative overflow-hidden rounded-sm bg-slate-100">
+            <img
+              src={service.image}
+              alt={service.imageAlt}
+              loading="lazy"
+              className="h-[300px] w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-[380px] lg:h-[440px]"
+            />
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-            Achat, vente, location, terrain ou investissement :
-            FIRDAWSI CONSULTING GROUP vous accompagne dans la préparation
-            de votre projet immobilier, selon vos besoins et vos objectifs.
-          </p>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071D30]/60 via-transparent to-transparent" />
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {prestationsImmobilier.map((service) => (
-              <a
-                key={service.id}
-                href={`#${service.id}`}
-                className="rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-[#123B5D] transition duration-300 hover:border-sky-500 hover:bg-sky-500/5"
-              >
-                {service.categorie}
-              </a>
-            ))}
+            <div className="absolute bottom-5 left-5 flex items-center gap-3 text-white md:bottom-7 md:left-7">
+              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-white text-[#123B5D]">
+                <Icon size={25} strokeWidth={1.7} />
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
+                  FIRDAWSI
+                </p>
+                <p className="text-sm font-medium">
+                  {service.categorie}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute -right-3 -top-4 z-10 flex h-16 w-16 items-center justify-center border-4 border-white bg-[#123B5D] text-xl font-bold text-white md:-right-5 md:-top-5 md:h-20 md:w-20 md:text-2xl">
+            {service.numero}
           </div>
         </div>
-      </section>
 
-      {/* Les six prestations */}
-      <section
-        id="services-immobilier"
-        className="px-6 pb-24 lg:px-10 lg:pb-32"
-      >
-        <div className="mx-auto max-w-screen-xl space-y-24 lg:space-y-32">
-          {prestationsImmobilier.map((service, index) => {
-            const Icon = service.Icon;
-            const imageAGauche = index % 2 !== 0;
+        {/* Contenu du service */}
+        <div className="relative z-10">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-10 bg-sky-500" />
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700">
+              {service.categorie}
+            </span>
+          </div>
 
-            return (
-              <article
-                key={service.id}
-                id={service.id}
-                className="grid scroll-mt-28 items-center gap-8 lg:grid-cols-2 lg:gap-16"
+          <h2 className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-4xl xl:text-[42px]">
+            {service.titre}
+          </h2>
+
+          <p className="mt-6 text-base leading-8 text-slate-600">
+            {service.description}
+          </p>
+
+          <div className="my-8 h-px w-full bg-slate-200" />
+
+          <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-[#123B5D]">
+            Notre accompagnement
+          </h3>
+
+          <ul className="space-y-4">
+            {service.points.map((point) => (
+              <li key={point} className="flex items-start gap-3">
+                <CheckCircle2
+                  size={20}
+                  className="mt-0.5 shrink-0 text-sky-600"
+                />
+                <span className="text-sm leading-6 text-slate-600">
+                  {point}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="/contact"
+            className="group mt-9 inline-flex w-full items-center justify-between gap-4 border border-[#123B5D] px-5 py-4 text-sm font-semibold text-[#123B5D] transition-all duration-300 hover:border-[#123B5D] hover:bg-[#123B5D] hover:text-white sm:w-auto sm:min-w-[280px]"
+          >
+            <span>{service.label}</span>
+            <ArrowUpRight
+              size={19}
+              className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            />
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export default function ImmobilierServices() {
+  return (
+    <section
+      id="services-immobilier"
+      className="overflow-hidden bg-white"
+    >
+      {/* Introduction */}
+      <div className="bg-slate-50 px-5 py-16 sm:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-10 bg-sky-500" />
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700">
+                  Nos expertises immobilières
+                </span>
+              </div>
+
+              <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-5xl lg:text-6xl">
+                Votre projet immobilier,
+                <span className="mt-2 block text-sky-600">
+                  notre accompagnement.
+                </span>
+              </h1>
+            </div>
+
+            <div className="lg:pb-2">
+              <p className="max-w-xl text-base leading-8 text-slate-600">
+                Location, vente, consultance et construction :
+                FIRDAWSI CONSULTING GROUP vous accompagne dans
+                vos démarches avec une approche fondée sur l'écoute,
+                le conseil et la recherche de solutions adaptées.
+              </p>
+
+              <a
+                href="/contact"
+                className="mt-6 inline-flex items-center gap-3 text-sm font-bold text-[#123B5D] transition-colors hover:text-sky-600"
               >
-                {/* Image */}
-                <div
-                  className={`relative ${
-                    imageAGauche
-                      ? "lg:order-1"
-                      : "lg:order-2 lg:translate-y-12"
-                  }`}
+                Échangeons sur votre projet
+                <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
+
+          {/* Accès rapide aux quatre services */}
+          <div className="mt-12 grid grid-cols-2 border-l border-t border-slate-200 md:grid-cols-4">
+            {servicesImmobiliers.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <a
+                  key={service.id}
+                  href={`#${service.id}`}
+                  className="group flex min-h-28 items-center gap-3 border-b border-r border-slate-200 bg-white p-4 transition-colors hover:bg-[#123B5D] sm:gap-4 sm:p-5"
                 >
-                  <div className="group relative h-[300px] overflow-hidden rounded-2xl bg-slate-100 sm:h-[380px] lg:h-[420px]">
-                    <img
-                      src={service.image}
-                      alt={service.alt}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                      onError={(event) => {
-                        event.currentTarget.onerror = null;
-                        event.currentTarget.src =
-                          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80";
-                      }}
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#071D30]/80 via-[#071D30]/10 to-transparent" />
-
-                    <span className="absolute left-6 top-6 rounded-full border border-white/30 bg-[#071D30]/50 px-4 py-2 text-xs font-bold tracking-widest text-white backdrop-blur-sm">
-                      {service.numero} / 06
-                    </span>
-
-                    <div className="absolute bottom-6 left-6 right-6 flex items-center gap-4 text-white">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/15 backdrop-blur-md">
-                        <Icon size={24} strokeWidth={1.7} />
-                      </div>
-
-                      <div>
-                        <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/70">
-                          FIRDAWSI CONSULTING GROUP
-                        </p>
-                        <p className="mt-1 text-lg font-semibold sm:text-xl">
-                          {service.categorie}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="absolute -bottom-3 -right-3 -z-10 h-24 w-24 rounded-2xl bg-sky-500/15" />
-                </div>
-
-                {/* Texte */}
-                <div
-                  className={`relative py-4 lg:py-10 ${
-                    imageAGauche
-                      ? "lg:order-2"
-                      : "lg:order-1 lg:translate-y-12"
-                  }`}
-                >
-                  <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
+                  <Icon
+                    size={23}
+                    strokeWidth={1.7}
+                    className="shrink-0 text-sky-600 transition-colors group-hover:text-sky-300"
+                  />
+                  <span className="text-sm font-semibold text-[#123B5D] transition-colors group-hover:text-white">
                     {service.categorie}
                   </span>
-
-                  <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-3xl lg:text-4xl">
-                    {service.titre}
-                  </h3>
-
-                  <p className="mt-5 text-base leading-8 text-slate-600">
-                    {service.description}
-                  </p>
-
-                  <div className="my-7 h-px w-full bg-slate-200" />
-
-                  <ul className="space-y-4">
-                    {service.avantages.map((avantage) => (
-                      <li
-                        key={avantage}
-                        className="flex items-start gap-3 text-sm leading-6 text-slate-700 sm:text-base"
-                      >
-                        <CheckCircle2
-                          size={20}
-                          className="mt-0.5 shrink-0 text-sky-600"
-                        />
-                        <span>{avantage}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-8 flex flex-wrap items-center gap-4">
-                    <a
-                      href={service.lien}
-                      className="inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-5 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-sky-500"
-                    >
-                      {service.bouton}
-                      <ArrowUpRight size={18} />
-                    </a>
-
-                    <a
-                      href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D] transition duration-300 hover:text-sky-600"
-                    >
-                      Poser une question
-                      <ArrowRight size={17} />
-                    </a>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+                  <ArrowUpRight
+                    size={16}
+                    className="ml-auto shrink-0 text-slate-400 transition-colors group-hover:text-white"
+                  />
+                </a>
+              );
+            })}
+          </div>
         </div>
-      </section>
+      </div>
 
-      {/* Appel à l'action */}
-      <section className="bg-[#071D30] px-6 py-16 sm:py-20 lg:px-10">
-        <div className="mx-auto flex max-w-screen-xl flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+      {/* Les quatre services */}
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        {servicesImmobiliers.map((service, index) => (
+          <ServiceImmobilier
+            key={service.id}
+            service={service}
+            index={index}
+          />
+        ))}
+      </div>
+
+      {/* Appel à l'action final */}
+      <div className="bg-[#071D30] px-5 py-16 sm:px-8 md:py-20">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="max-w-2xl">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
-              Construisons votre projet
-            </span>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-10 bg-sky-400" />
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-300">
+                Parlons de votre projet
+              </span>
+            </div>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl">
-              Quel est votre prochain projet immobilier ?
+            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
+              Un projet immobilier en tête ?
             </h2>
 
-            <p className="mt-4 leading-7 text-slate-300">
-              Parlez-nous de votre besoin. Nous échangerons avec vous sur
-              les possibilités et les prochaines étapes à envisager.
+            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+              Notre équipe est à votre écoute pour discuter de vos
+              besoins et vous orienter vers un accompagnement adapté.
             </p>
           </div>
 
           <a
-            href="/contact?service=immobilier"
-            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-sky-500 px-6 py-4 font-semibold text-white transition duration-300 hover:bg-white hover:text-[#123B5D]"
+            href="/contact"
+            className="inline-flex shrink-0 items-center justify-center gap-3 bg-sky-500 px-7 py-4 text-sm font-bold text-white transition-colors hover:bg-sky-600"
           >
-            Parlons de votre projet
-            <ArrowUpRight size={19} />
+            <MessageCircle size={19} />
+            Contacter FIRDAWSI
+            <ArrowRight size={18} />
           </a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
