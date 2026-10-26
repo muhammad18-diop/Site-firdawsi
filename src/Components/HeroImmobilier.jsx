@@ -162,24 +162,7 @@ export default function HeroImmobilier() {
           </a>
         </div>
 
-        {/* Raccourcis vers les prestations */}
-        <div className="mt-10 flex max-w-4xl flex-wrap gap-2">
-          {services.map((service) => {
-            const Icon = service.icon;
-
-            return (
-              <a
-                key={service.title}
-                href={service.link}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs font-medium text-white backdrop-blur-sm transition duration-300 hover:border-sky-400 hover:bg-sky-500/20 sm:text-sm"
-              >
-                <Icon size={15} className="shrink-0 text-sky-300" />
-                {service.title}
-              </a>
-            );
-          })}
-        </div>
-
+       
         {/* Navigation du diaporama */}
         <div className="mt-8 flex items-center gap-3">
           {images.map((image, index) => (
