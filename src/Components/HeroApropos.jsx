@@ -78,7 +78,7 @@ function HeroApropos() {
 
         <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-sky-300 md:text-sm">
           <span className="h-px w-10 bg-sky-400" />
-          À propos de nous
+          Qui sommes nous ?
         </p>
 
         <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
