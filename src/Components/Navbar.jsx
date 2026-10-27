@@ -96,7 +96,7 @@ function Navbar() {
                   end={link.path === "/"}
                   onClick={() => setMenuOpen(false)}
                   className={({ isActive }) =>
-                    `block rounded-lg px-3 py-2 text-sm transition lg:px-0 lg:py-3 ${
+                    `block rounded-lg px-3 py-2 text-base transition lg:px-0 lg:py-3 ${
                       isActive
                         ? "bg-sky-100 font-bold text-sky-600 lg:bg-transparent lg:text-sky-600 underline lg:underline-offset-4"
                         : "text-sky-650 hover:bg-sky-100 lg:hover:bg-transparent lg:hover:text-sky-600"
