@@ -6,6 +6,7 @@ import Statistiques from "../Components/Statistiques";
 import NosValeurs from "../Components/NosValeurs";
 import NousTrouver from "../Components/NousTrouver";
 import Footer from "../Components/Footer";
+import AboutCorps from "../Components/CorpsAbout";
 
 function About() {  
 
@@ -13,10 +14,7 @@ function About() {
         <div>
             <Navbar />
             <HeroApropos />
-            <NotreHistoire />
-            <Statistiques />
-            <NosValeurs />
-            <NousTrouver />
+            <AboutCorps />
             <Footer />
         </div>
     )
