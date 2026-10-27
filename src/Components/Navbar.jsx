@@ -37,27 +37,21 @@ function Navbar() {
       <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-4 px-4 py-3 lg:px-10">
 
         {/* Logo */}
-        <Link
-          to="/"
-          onClick={() => setMenuOpen(false)}
-          className="flex shrink-0 items-center gap-3"
-        >
-          <img
-            src="/firdawsi-bg.png"
-            alt="Logo Firdawsi Consulting Group"
-            className="h-14 w-16 object-contain sm:h-16 sm:w-20"
-          />
+      
+<Link
+  to="/"
+  onClick={() => setMenuOpen(false)}
+  className="flex shrink-0 items-center gap-3"
+>
+  <img
+    src="/firdawsi-bg.png"
+    alt="Logo Firdawsi Consulting Group"
+    className="h-20 w-24 object-contain sm:h-24 sm:w-28"
+  />
+</Link>
 
-          <div className="hidden sm:block">
-            <span className="block text-sm font-extrabold tracking-wide text-blue-950 lg:text-base">
-              FIRDAWSI
-            </span>
-            <span className="block text-xs font-semibold tracking-wider text-sky-600">
-              CONSULTING GROUP
-            </span>
-           
-          </div>
-        </Link>
+
+          
 
         {/* Actions */}
         <div className="flex items-center gap-2 lg:order-3">

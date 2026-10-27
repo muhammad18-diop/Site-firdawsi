@@ -76,10 +76,7 @@ function HeroHome() {
       <div className="relative z-10 mx-auto w-full max-w-screen-xl px-6 py-20 lg:px-10">
         
         {/* Sous-titre recommandé */}
-        <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-sky-300 md:text-sm">
-          <span className="h-px w-10 bg-sky-400" />
-          Voyage · Immobilier · Assurance
-        </p>
+        
 
         {/* Titre principal recommandé (H1 unique) */}
         <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">

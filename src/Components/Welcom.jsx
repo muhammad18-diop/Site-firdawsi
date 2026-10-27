@@ -58,9 +58,9 @@ export default function Welcome() {
           </p>
 
           {/* Nom de l'entreprise */}
-          <h1 className="text-4xl font-light tracking-[0.12em] sm:text-6xl md:text-7xl">
+          <h1 className="text-4xl font-light tracking-[0.12em] font-semibold sm:text-6xl md:text-7xl  text-bold">
             FIRDAWSI
-            <span className="mt-2 block font-semibold text-sky-400">
+            <span className="mt-2 block font-semibold  text-bold">
               CONSULTING GROUP
             </span>
           </h1>
@@ -74,10 +74,7 @@ export default function Welcome() {
           </p>
 
           {/* Description */}
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
-            Voyage, immobilier et assurance : nous vous accompagnons
-            dans chacun de vos projets avec professionnalisme et engagement.
-          </p>
+          
 
           {/* Bouton Commencer le voyage */}
           <Link
