@@ -327,7 +327,6 @@ export default function AboutCorps() {
             title="Nos domaines d’activité"
             description="Des domaines complémentaires pour accompagner vos projets."
           />
-
           <p className="mx-auto mb-12 max-w-3xl text-center leading-8 text-gray-600">
             FCG a démarré ses activités autour de trois domaines
             complémentaires, avec la volonté de proposer un accompagnement

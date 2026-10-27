@@ -153,7 +153,7 @@ function Immobilier() {
                   </span>
                 </div>
 
-                <h4 className="mt-7 text-xl font-bold text-[#071D30]">
+                <h4 className="mt-7 text-xl font-bold text-[#123B5D]">
                   {service.title}
                 </h4>
 

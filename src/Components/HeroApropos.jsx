@@ -82,9 +82,9 @@ function HeroApropos() {
         </p>
 
         <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
-          FIRDAWSI CONSULTING GROUP,
+          FIRDAWSI CONSULTING GROUP, l'excellence au coeur de vos besions.
           <span className="block text-sky-400">
-            votre partenaire de confiance.
+            
           </span>
         </h1>
 
