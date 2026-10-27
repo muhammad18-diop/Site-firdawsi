@@ -88,12 +88,7 @@ function HeroApropos() {
           </span>
         </h1>
 
-        <p className="mb-9 max-w-2xl text-base leading-8 text-gray-200 md:text-lg">
-          Nous accompagnons particuliers et professionnels dans leurs
-          projets de voyage, d’immobilier et d’assurance, avec une approche
-          fondée sur l’écoute, le conseil et des solutions adaptées à
-          chaque besoin.
-        </p>
+        
 
         {/* Boutons */}
         <div className="flex flex-col gap-4 sm:flex-row">
