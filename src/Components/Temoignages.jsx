@@ -89,7 +89,7 @@ function Temoignages() {
             <div className="mt-16 text-center">
               <a
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-lg bg-blue-950 px-8 py-4 text-sm font-bold text-white transition hover:bg-sky-700"
+                className="inline-flex items-center gap-3 rounded-lg bg-[#071D30] px-8 py-4 text-sm font-bold text-white transition hover:bg-sky-700"
               >
                 Parlons de votre projet
                 <ArrowRight size={18} />

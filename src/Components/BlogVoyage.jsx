@@ -104,7 +104,7 @@ export default function BlogVoyages() {
       : articles.filter((article) => article.category === activeCategory);
 
   return (
-    <section id="articles" className="bg-white py-20 md:py-28">
+    <section id="blog-voyages" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-screen-xl px-6 lg:px-10">
         {/* En-tête */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

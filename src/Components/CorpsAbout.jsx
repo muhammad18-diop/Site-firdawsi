@@ -343,7 +343,7 @@ export default function AboutCorps() {
       </section>
 
       {/* 5. NOTRE MISSION */}
-      <section className="bg-[#071D30] px-6 py-20 text-white sm:px-10 lg:px-16 lg:py-24">
+      <section className="bg-[#071D30] px-6 py-20 text-white sm:px-10 lg:px-16 lg:py-24" id="notre-mission">
         <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-[auto_1fr] md:gap-16">
           <div className="flex h-24 w-24 items-center justify-center border border-[#8EC9F0]/60 bg-white/5 text-[#8EC9F0]">
             <Handshake size={44} strokeWidth={1.4} />
@@ -372,7 +372,7 @@ export default function AboutCorps() {
       </section>
 
       {/* 6. NOTRE VISION */}
-      <section className="relative overflow-hidden px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+      <section className="relative overflow-hidden px-6 py-20 sm:px-10 lg:px-16 lg:py-28" id="notre-vision">
         <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full border border-[#8EC9F0]/30" />
         <div className="absolute -right-12 -top-12 h-56 w-56 rounded-full border border-[#8EC9F0]/30" />
 

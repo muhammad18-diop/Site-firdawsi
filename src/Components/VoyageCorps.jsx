@@ -16,128 +16,140 @@ const prestationsVoyage = [
     id: "visa",
     numero: "01",
     categorie: "Assistance visa",
-    titre: "Préparez vos démarches de visa en toute sérénité",
+    titre: "Préparez votre dossier de visa avec méthode.",
     description:
-      "Nous vous accompagnons dans la préparation de votre dossier de visa, de la compréhension des exigences à la vérification des documents nécessaires.",
+      "Vous préparez un voyage et souhaitez mieux comprendre les démarches de visa ? FCG vous oriente sur les étapes à prévoir, les pièces généralement demandées et l’organisation de votre dossier, selon la destination et le motif du séjour.",
     avantages: [
-      "Orientation selon votre destination",
-      "Aide à la préparation du dossier",
-      "Vérification des pièces justificatives",
+      "Orientation selon la destination et le motif du voyage",
+      "Aide à l’organisation des pièces justificatives",
+      "Informations sur les étapes et les rendez-vous",
     ],
     image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=85",
     alt: "Documents administratifs préparés pour une démarche de visa",
     Icon: FileCheck,
     lien: "/contact?service=visa",
     bouton: "Préparer mon dossier",
+    note:
+      "FCG accompagne la préparation du dossier, mais ne décide pas de l’octroi du visa. La décision appartient aux autorités compétentes.",
   },
   {
     id: "billets",
     numero: "02",
     categorie: "Billets d’avion",
-    titre: "Voyagez vers votre prochaine destination",
+    titre: "Trouvez un vol adapté à votre destination.",
     description:
-      "Nous vous aidons à rechercher des vols adaptés à votre destination, à vos dates de voyage et à votre budget.",
+      "Vous planifiez un déplacement personnel ou professionnel ? FCG vous accompagne dans la recherche de solutions de transport aérien en tenant compte de votre destination, de vos dates et de votre budget.",
     avantages: [
-      "Recherche de vols selon vos besoins",
+      "Recherche de vols selon votre itinéraire et vos dates",
       "Comparaison des options disponibles",
-      "Accompagnement dans la réservation",
+      "Accompagnement dans les démarches de réservation",
     ],
     image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80",
-    alt: "Avion de ligne en vol",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85",
+    alt: "Avion de ligne en vol au-dessus des nuages",
     Icon: Plane,
     lien: "/contact?service=billets-avion",
-    bouton: "Rechercher un vol",
+    bouton: "Demander un billet",
+    note:
+      "Les itinéraires, tarifs, conditions de modification et disponibilités doivent être confirmés au moment de la demande.",
   },
   {
     id: "etudes",
     numero: "03",
     categorie: "Études à l’étranger",
-    titre: "Donnez une nouvelle dimension à vos études",
+    titre: "Construisez votre projet d’études à l’international.",
     description:
-      "Vous souhaitez poursuivre vos études à l’étranger ? Nous vous accompagnons dans la préparation de votre projet et l’organisation de vos démarches.",
+      "Vous souhaitez poursuivre vos études à l’étranger ? FCG vous accompagne dans l’exploration de votre projet, la recherche d’informations sur les établissements et les formations, ainsi que la préparation des démarches de candidature.",
     avantages: [
-      "Orientation dans votre projet d’études",
-      "Aide à la préparation des documents",
-      "Accompagnement dans les démarches",
+      "Orientation sur le projet et le choix de la destination",
+      "Informations sur les établissements et les conditions de candidature",
+      "Accompagnement dans la préparation des documents",
     ],
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85",
     alt: "Étudiants réunis sur un campus universitaire",
     Icon: GraduationCap,
     lien: "/contact?service=etudes-etranger",
-    bouton: "Préparer mon projet",
+    bouton: "Parler de mon projet",
+    note:
+      "Une admission, une bourse, un visa ou un logement ne sont pas garantis. Les décisions appartiennent aux établissements et aux organismes compétents.",
   },
   {
     id: "hotel",
     numero: "04",
-    categorie: "Réservation d’hôtel",
-    titre: "Profitez d’un séjour préparé avec soin",
+    categorie: "Réservation d’hébergement",
+    titre: "Préparez un séjour qui correspond à vos attentes.",
     description:
-      "Pour vos vacances, vos études ou vos déplacements professionnels, nous vous aidons à rechercher un hébergement correspondant à vos attentes.",
+      "Pour vos vacances, vos études ou vos déplacements professionnels, FCG peut vous orienter dans la recherche d’un hébergement selon votre destination, vos dates, votre budget et vos préférences.",
     avantages: [
-      "Recherche selon votre destination",
-      "Prise en compte de votre budget",
-      "Accompagnement dans la réservation",
+      "Recherche selon la destination et les dates",
+      "Prise en compte du budget et des préférences",
+      "Accompagnement dans les étapes de réservation",
     ],
     image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    alt: "Hôtel avec piscine et espace de détente",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85",
+    alt: "Hôtel et espace d’accueil pour les voyageurs",
     Icon: Hotel,
     lien: "/contact?service=reservation-hotel",
-    bouton: "Trouver un hébergement",
+    bouton: "Demander un hébergement",
+    note:
+      "Toute réservation dépend des disponibilités et des conditions du prestataire.",
   },
   {
     id: "assurance-voyage",
     numero: "05",
     categorie: "Assurance voyage",
-    titre: "Partez avec une meilleure tranquillité d’esprit",
+    titre: "Voyagez en comprenant les garanties de votre couverture.",
     description:
-      "Découvrez les solutions d’assurance voyage adaptées à votre séjour et renseignez-vous sur les garanties nécessaires à votre situation.",
+      "Selon votre destination et votre situation, une assurance voyage peut prévoir différentes garanties, notamment pour certains frais médicaux à l’étranger, l’assistance ou les imprévus couverts par le contrat. FCG vous oriente sur les options proposées.",
     avantages: [
-      "Orientation selon votre voyage",
-      "Informations sur les garanties",
-      "Aide dans vos démarches",
+      "Orientation selon le voyage et les exigences de destination",
+      "Informations sur les garanties, exclusions et conditions",
+      "Aide à identifier une offre correspondant à votre besoin",
     ],
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-    alt: "Paysage de destination de voyage",
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=85",
+    alt: "Destination de voyage au bord d’un lac",
     Icon: ShieldCheck,
     lien: "/contact?service=assurance-voyage",
-    bouton: "Découvrir les solutions",
+    bouton: "Me renseigner",
+    note:
+      "Les garanties, exclusions, plafonds et conditions dépendent du contrat d’assurance proposé.",
   },
   {
     id: "omra-hajj",
     numero: "06",
     categorie: "Omra & Hajj",
-    titre: "Préparez votre pèlerinage avec un accompagnement adapté",
+    titre: "Préparez votre pèlerinage avec des informations claires.",
     description:
-      "Nous vous accompagnons dans l’organisation de votre projet de pèlerinage et vous orientons sur les différentes démarches à prévoir.",
+      "Vous envisagez d’accomplir l’Omra ou le Hajj ? FCG vous informe sur les démarches et les éléments d’organisation à prévoir, selon les prestations effectivement proposées et les règles en vigueur.",
     avantages: [
-      "Informations sur l’organisation du séjour",
-      "Orientation sur les démarches nécessaires",
-      "Accompagnement dans la préparation",
+      "Informations sur les étapes de préparation",
+      "Orientation sur les formalités et les documents nécessaires",
+      "Accompagnement selon les services disponibles",
     ],
     image:
-      "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=85",
     alt: "Architecture de la Grande Mosquée de La Mecque",
     Icon: Landmark,
     lien: "/contact?service=omra-hajj",
-    bouton: "Préparer mon pèlerinage",
+    bouton: "Me renseigner sur le pèlerinage",
+    note:
+      "Les conditions, dates, formalités et disponibilités doivent être vérifiées avant toute confirmation.",
   },
 ];
 
 export default function VoyagesServices() {
   return (
     <main className="overflow-hidden bg-white text-slate-800">
-      {/* Présentation */}
-      <section className="px-6 pb-16 pt-16 sm:pt-20 lg:px-10 lg:pb-24">
+      {/* Introduction : sans Hero */}
+      <section className="px-6 pb-14 pt-10 sm:pb-16 sm:pt-14 lg:px-10">
         <div className="mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
-            <span className="h-px w-8 bg-sky-500" />
+          <span className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#123B5D]">
+            <span className="h-px w-8 bg-[#8EC9F0]" />
             Nos services de voyage
-            <span className="h-px w-8 bg-sky-500" />
+            <span className="h-px w-8 bg-[#8EC9F0]" />
           </span>
 
           <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
@@ -145,9 +157,10 @@ export default function VoyagesServices() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-            Visa, billets d’avion, études à l’étranger ou hébergement :
-            FIRDAWSI CONSULTING GROUP vous accompagne dans la préparation
-            de vos projets de voyage.
+            Billet d’avion, préparation d’un dossier de visa, études à
+            l’étranger, hébergement, assurance voyage ou pèlerinage :
+            découvrez les prestations pour lesquelles notre équipe peut vous
+            orienter et vous accompagner.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -155,7 +168,7 @@ export default function VoyagesServices() {
               <a
                 key={service.id}
                 href={`#${service.id}`}
-                className="rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-[#123B5D] transition duration-300 hover:border-sky-500 hover:bg-sky-500/5"
+                className="rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-[#123B5D] transition duration-300 hover:border-[#8EC9F0] hover:bg-[#8EC9F0]/10"
               >
                 {service.categorie}
               </a>
@@ -164,9 +177,9 @@ export default function VoyagesServices() {
         </div>
       </section>
 
-      {/* Les six prestations */}
-      <section className="px-6 pb-24 lg:px-10 lg:pb-32">
-        <div className="mx-auto max-w-screen-xl space-y-24 lg:space-y-32">
+      {/* Les six prestations : alternance image et texte conservée */}
+      <section className="px-6 pb-20 lg:px-10 lg:pb-28">
+        <div className="mx-auto max-w-screen-xl space-y-20 lg:space-y-28">
           {prestationsVoyage.map((service, index) => {
             const Icon = service.Icon;
             const imageAGauche = index % 2 !== 0;
@@ -182,10 +195,10 @@ export default function VoyagesServices() {
                   className={`relative ${
                     imageAGauche
                       ? "lg:order-1"
-                      : "lg:order-2 lg:translate-y-12"
+                      : "lg:order-2 lg:translate-y-8"
                   }`}
                 >
-                  <div className="group relative h-[300px] overflow-hidden rounded-2xl bg-slate-100 sm:h-[380px] lg:h-[420px]">
+                  <div className="group relative h-[280px] overflow-hidden rounded-2xl bg-slate-100 sm:h-[360px] lg:h-[420px]">
                     <img
                       src={service.image}
                       alt={service.alt}
@@ -194,13 +207,13 @@ export default function VoyagesServices() {
                       onError={(event) => {
                         event.currentTarget.onerror = null;
                         event.currentTarget.src =
-                          "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80";
+                          "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85";
                       }}
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#071D30]/80 via-[#071D30]/10 to-transparent" />
 
-                    <span className="absolute left-6 top-6 rounded-full border border-white/30 bg-[#071D30]/50 px-4 py-2 text-xs font-bold tracking-widest text-white backdrop-blur-sm">
+                    <span className="absolute left-6 top-6 rounded-full border border-white/30 bg-[#071D30]/60 px-4 py-2 text-xs font-bold tracking-widest text-white backdrop-blur-sm">
                       {service.numero} / 06
                     </span>
 
@@ -210,7 +223,7 @@ export default function VoyagesServices() {
                       </div>
 
                       <div>
-                        <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/70">
+                        <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/75">
                           FIRDAWSI CONSULTING GROUP
                         </p>
                         <p className="mt-1 text-lg font-semibold sm:text-xl">
@@ -220,18 +233,18 @@ export default function VoyagesServices() {
                     </div>
                   </div>
 
-                  <div className="absolute -bottom-3 -right-3 -z-10 h-24 w-24 rounded-2xl bg-sky-500/15" />
+                  <div className="absolute -bottom-3 -right-3 -z-10 h-24 w-24 rounded-2xl bg-[#8EC9F0]/25" />
                 </div>
 
                 {/* Texte */}
                 <div
-                  className={`relative py-4 lg:py-10 ${
+                  className={`relative py-2 lg:py-8 ${
                     imageAGauche
                       ? "lg:order-2"
-                      : "lg:order-1 lg:translate-y-12"
+                      : "lg:order-1 lg:translate-y-8"
                   }`}
                 >
-                  <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
+                  <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#123B5D]">
                     {service.categorie}
                   </span>
 
@@ -253,17 +266,24 @@ export default function VoyagesServices() {
                       >
                         <CheckCircle2
                           size={20}
-                          className="mt-0.5 shrink-0 text-sky-600"
+                          className="mt-0.5 shrink-0 text-[#123B5D]"
                         />
                         <span>{avantage}</span>
                       </li>
                     ))}
                   </ul>
 
+                  {/* Précision utile selon la prestation */}
+                  <div className="mt-6 rounded-lg border-l-4 border-[#8EC9F0] bg-slate-50 px-4 py-3">
+                    <p className="text-sm leading-6 text-slate-600">
+                      {service.note}
+                    </p>
+                  </div>
+
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <a
                       href={service.lien}
-                      className="inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-5 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-sky-500"
+                      className="inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-5 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-[#071D30] focus:outline-none focus:ring-4 focus:ring-[#8EC9F0]/50"
                     >
                       {service.bouton}
                       <ArrowUpRight size={18} />
@@ -271,7 +291,7 @@ export default function VoyagesServices() {
 
                     <a
                       href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D] transition duration-300 hover:text-sky-600"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D] transition duration-300 hover:text-slate-500"
                     >
                       Poser une question
                       <ArrowRight size={17} />
@@ -284,29 +304,34 @@ export default function VoyagesServices() {
         </div>
       </section>
 
-      {/* Appel à l'action */}
-      <section className="bg-[#071D30] px-6 py-16 sm:py-20 lg:px-10">
-        <div className="mx-auto flex max-w-screen-xl flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+      {/* Appel à l’action final : sans Hero supplémentaire */}
+      <section className="relative overflow-hidden bg-[#071D30] px-6 py-16 sm:py-20 lg:px-10">
+        <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full border border-white/10" />
+        <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full border border-white/10" />
+
+        <div className="relative mx-auto flex max-w-screen-xl flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="max-w-2xl">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-400">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#8EC9F0]">
               Votre prochain départ
             </span>
 
             <h2 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl">
-              Où souhaitez-vous aller ?
+              Parlons de votre prochain voyage.
             </h2>
 
             <p className="mt-4 leading-7 text-slate-300">
-              Présentez-nous votre projet. Nous vous aiderons à identifier
-              les prochaines étapes de votre voyage.
+              Vous avez un projet de voyage, de déplacement professionnel,
+              d’études à l’étranger ou de pèlerinage ? Contactez FCG pour nous
+              présenter votre besoin et connaître les démarches et prestations
+              qui peuvent vous être proposées.
             </p>
           </div>
 
           <a
             href="/contact"
-            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-sky-500 px-6 py-4 font-semibold text-white transition duration-300 hover:bg-white hover:text-[#123B5D]"
+            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#8EC9F0] px-6 py-4 font-semibold text-[#071D30] transition duration-300 hover:bg-white"
           >
-            Parlons de votre projet
+            Présenter mon projet
             <ArrowUpRight size={19} />
           </a>
         </div>
