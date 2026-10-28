@@ -58,13 +58,13 @@ function Footer() {
           <div>
             <Link to="/accueil" className="inline-flex items-center gap-3">
               {/* Logo officiel */}
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center">
-                <img
-                  src="/firdawsi-bg.png"
-                  alt="Logo FIRDAWSI CONSULTING GROUP"
-                  className="h-full w-full object-contain"
-                />
-              </div>
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center">
+  <img
+    src="/firdawsi-bg.png"
+    alt="Logo FIRDAWSI CONSULTING GROUP"
+    className="h-full w-full object-contain"
+  />
+</div>
 
               <div>
                 <p className="text-lg font-bold tracking-wide">
