@@ -197,7 +197,7 @@ function Immobilier() {
 
             <a
               href="/contact"
-              className="mt-8 inline-flex items-center gap-3 rounded-lg bg-[#071D30] px-7 py-4 text-sm font-bold text-white transition hover:bg-sky-700"
+              className="mt-8 inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-7 py-4 text-sm font-bold text-white transition hover:bg-sky-700"
             >
               Contactez notre équipe
               <ArrowUpRight size={18} />

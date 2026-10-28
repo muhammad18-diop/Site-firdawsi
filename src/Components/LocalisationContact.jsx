@@ -75,7 +75,7 @@ export default function LocalisationContact() {
               href={`https://www.google.com/maps/search/?api=1&query=${adresseMaps}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#071D30] px-5 py-3.5 font-semibold text-white transition hover:bg-[#0B2B45] focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#123B5D] px-5 py-3.5 font-semibold text-white transition hover:bg-[#0B2B45] focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
             >
              
               Voir l’itinéraire

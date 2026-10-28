@@ -158,16 +158,14 @@ function AssuranceItem({ assurance, index }) {
   return (
     <article
       id={assurance.id}
-      className="scroll-mt-28 border-b border-slate-200 py-12 last:border-b-0 md:py-16"
+      className="scroll-mt-28 border-b border-sky-600/30 py-12 last:border-b-0 md:py-16"
     >
       <div
         className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${
-          imageAGauche
-            ? "lg:[&>div:first-child]:order-2"
-            : ""
+          imageAGauche ? "lg:[&>div:first-child]:order-2" : ""
         }`}
       >
-        {/* Image */}
+        {/* IMAGE */}
         <div className="group relative min-h-[280px] overflow-hidden rounded-2xl bg-slate-100 sm:min-h-[360px]">
           <img
             src={assurance.image}
@@ -178,7 +176,8 @@ function AssuranceItem({ assurance, index }) {
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#071D30]/80 via-transparent to-transparent" />
 
-          <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#123B5D] shadow-sm">
+          {/* ICÔNE EN SKY-600 */}
+          <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-xl border border-sky-600/20 bg-white text-sky-600 shadow-sm">
             <Icon size={24} strokeWidth={1.7} />
           </div>
 
@@ -193,7 +192,7 @@ function AssuranceItem({ assurance, index }) {
           </div>
         </div>
 
-        {/* Contenu */}
+        {/* CONTENU */}
         <div className="py-2">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#123B5D]">
             Nos solutions d’assurance
@@ -206,6 +205,9 @@ function AssuranceItem({ assurance, index }) {
           <p className="mb-7 text-base leading-8 text-gray-600">
             {assurance.description}
           </p>
+
+          {/* TRAIT SÉPARATEUR EN SKY-600 */}
+          <div className="mb-8 h-px w-full bg-sky-600" />
 
           <div className="mb-8">
             <h4 className="mb-4 font-semibold text-[#123B5D]">
@@ -220,8 +222,9 @@ function AssuranceItem({ assurance, index }) {
                 >
                   <CheckCircle2
                     size={19}
-                    className="mt-0.5 shrink-0 text-[#123B5D]"
+                    className="mt-0.5 shrink-0 text-sky-600"
                   />
+
                   <span>{avantage}</span>
                 </li>
               ))}
@@ -230,9 +233,10 @@ function AssuranceItem({ assurance, index }) {
 
           <a
             href={`/contact?service=${assurance.id}`}
-            className="group inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-6 py-3.5 font-semibold text-white transition hover:bg-[#0B2B46]"
+            className="group inline-flex items-center gap-3 rounded-lg bg-sky-600 px-6 py-3.5 font-semibold text-white transition hover:bg-[#123B5D] focus:outline-none focus:ring-4 focus:ring-sky-600/30"
           >
             Demander des informations
+
             <ArrowRight
               size={18}
               className="transition-transform group-hover:translate-x-1"
@@ -247,14 +251,14 @@ function AssuranceItem({ assurance, index }) {
 export default function AssuranceServices() {
   return (
     <main className="bg-white">
-      {/* Introduction de la section */}
+      {/* INTRODUCTION */}
       <section
         id="nos-assurances"
         className="px-5 py-12 sm:px-8 sm:py-16 lg:py-20"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#123B5D]">
-            <span className="h-px w-8 bg-[#8EC9F0]" />
+            <span className="h-px w-8 bg-sky-600" />
             Nos domaines d’assurance
           </div>
 
@@ -282,14 +286,14 @@ export default function AssuranceServices() {
         </div>
       </section>
 
-      {/* Appel à l'action final */}
+      {/* APPEL À L’ACTION FINAL */}
       <section className="px-5 pb-16 sm:px-8 sm:pb-20">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl bg-[#071D30] px-6 py-10 text-white sm:px-10 sm:py-14 lg:px-14">
-          <div className="absolute -right-10 -top-20 h-64 w-64 rounded-full bg-[#8EC9F0]/20 blur-3xl" />
+          <div className="absolute -right-10 -top-20 h-64 w-64 rounded-full bg-sky-600/20 blur-3xl" />
 
           <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-2xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#8EC9F0]">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-sky-600">
                 FIRDAWSI CONSULTING GROUP
               </p>
 
@@ -305,9 +309,10 @@ export default function AssuranceServices() {
 
             <a
               href="/contact"
-              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-lg bg-white px-6 py-4 font-semibold text-[#123B5D] transition hover:bg-[#8EC9F0]"
+              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-lg bg-white px-6 py-4 font-semibold text-[#123B5D] transition hover:bg-sky-600 hover:text-white"
             >
               Parlons de vos besoins
+
               <ArrowRight
                 size={19}
                 className="transition-transform group-hover:translate-x-1"

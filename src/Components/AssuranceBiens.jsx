@@ -126,7 +126,7 @@ function AssuranceBiens() {
               Nos domaines de couverture
             </p>
 
-            <h3 className="text-2xl font-bold text-blue-950 md:text-3xl">
+            <h3 className="text-2xl font-bold text-[#123B5D] md:text-3xl">
               Des solutions pour différents types de biens
             </h3>
           </div>
@@ -145,7 +145,7 @@ function AssuranceBiens() {
                       <Icon size={24} strokeWidth={1.8} />
                     </div>
 
-                    <h4 className="mt-6 text-lg font-bold text-[#071D30]">
+                    <h4 className="mt-6 text-lg font-bold text-[#123B5D]">
                       {assurance.titre}
                     </h4>
 

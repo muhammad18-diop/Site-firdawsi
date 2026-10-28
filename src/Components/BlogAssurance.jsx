@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -25,7 +25,8 @@ const articles = [
     category: "Assurance automobile",
     date: "Guide pratique",
     readTime: "5 min",
-    title: "Assurance automobile au Sénégal : ce qu'il faut savoir avant de prendre la route",
+    title:
+      "Assurance automobile au Sénégal : ce qu'il faut savoir avant de prendre la route",
     excerpt:
       "Responsabilité civile, garanties complémentaires et documents : découvrez les points essentiels pour choisir votre assurance automobile.",
     image:
@@ -48,7 +49,8 @@ Conseil FIRDAWSI : ne choisissez pas uniquement en fonction du prix. Vérifiez l
     category: "Assurance habitation",
     date: "Conseil immobilier",
     readTime: "5 min",
-    title: "Propriétaire ou locataire : comment protéger son logement au Sénégal ?",
+    title:
+      "Propriétaire ou locataire : comment protéger son logement au Sénégal ?",
     excerpt:
       "Incendie, dégâts des eaux, dommages aux biens : identifiez les risques à prendre en compte pour protéger votre habitation.",
     image:
@@ -71,7 +73,8 @@ Conseil FIRDAWSI : demandez une proposition adaptée à votre logement et vérif
     category: "Assurance santé",
     date: "Guide pratique",
     readTime: "6 min",
-    title: "Assurance santé au Sénégal : comprendre les garanties et les remboursements",
+    title:
+      "Assurance santé au Sénégal : comprendre les garanties et les remboursements",
     excerpt:
       "Consultations, hospitalisation, médicaments et prise en charge : les critères à examiner pour choisir une couverture santé adaptée.",
     image:
@@ -94,7 +97,8 @@ Conseil FIRDAWSI : demandez un tableau écrit des garanties et des plafonds. Vé
     category: "Assurance voyage",
     date: "Conseil aux voyageurs",
     readTime: "4 min",
-    title: "Préparer un voyage depuis le Sénégal : faut-il souscrire une assurance voyage ?",
+    title:
+      "Préparer un voyage depuis le Sénégal : faut-il souscrire une assurance voyage ?",
     excerpt:
       "Frais médicaux à l'étranger, assistance, annulation et bagages : découvrez les garanties à examiner avant votre départ.",
     image:
@@ -117,7 +121,8 @@ Conseil FIRDAWSI : comparez les garanties de votre assurance voyage avec celles 
     category: "Conseils et prévention",
     date: "Guide pratique",
     readTime: "5 min",
-    title: "Comment choisir une compagnie d'assurance au Sénégal ?",
+    title:
+      "Comment choisir une compagnie d'assurance au Sénégal ?",
     excerpt:
       "Avant de signer un contrat, apprenez à comparer les garanties, à examiner les exclusions et à vérifier les conditions d'indemnisation.",
     image:
@@ -140,7 +145,8 @@ Conseil FIRDAWSI : conservez votre contrat, vos quittances et les justificatifs 
     category: "Sinistres et indemnisation",
     date: "Guide pratique",
     readTime: "5 min",
-    title: "Un sinistre vient de se produire : quelles démarches effectuer ?",
+    title:
+      "Un sinistre vient de se produire : quelles démarches effectuer ?",
     excerpt:
       "Accident, dégât matériel ou autre incident : les bons réflexes pour documenter la situation et contacter votre assureur.",
     image:
@@ -171,8 +177,21 @@ const categories = [
 ];
 
 export default function BlogAssurances() {
-  const [activeCategory, setActiveCategory] = useState("Tous les articles");
+  const [activeCategory, setActiveCategory] =
+    useState("Tous les articles");
   const [selectedArticle, setSelectedArticle] = useState(null);
+  const [activeArticleIndex, setActiveArticleIndex] = useState(0);
+
+  // Défilement automatique toutes les deux secondes.
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveArticleIndex(
+        (current) => (current + 1) % articles.length
+      );
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const filteredArticles =
     activeCategory === "Tous les articles"
@@ -182,14 +201,19 @@ export default function BlogAssurances() {
         );
 
   const featuredArticle =
-    activeCategory === "Tous les articles" ? articles[0] : null;
+    activeCategory === "Tous les articles"
+      ? articles[activeArticleIndex]
+      : null;
 
   const visibleArticles = filteredArticles.filter(
     (article) => article.id !== featuredArticle?.id
   );
 
   return (
-    <section id="blog-assurance" className="bg-white py-20 md:py-28">
+    <section
+      id="blog-assurance"
+      className="bg-white py-20 md:py-28"
+    >
       <div className="mx-auto max-w-screen-xl px-6 lg:px-10">
         {/* En-tête */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -199,7 +223,7 @@ export default function BlogAssurances() {
               Le magazine assurances
             </div>
 
-            <h2 className="text-3xl font-extrabold leading-tight text-[#071B3A] md:text-5xl">
+            <h2 className="text-3xl font-extrabold leading-tight text-[#123B5D] md:text-5xl">
               Comprenez vos garanties,
               <span className="text-sky-500">
                 {" "}protégez l'essentiel.
@@ -214,7 +238,7 @@ export default function BlogAssurances() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 text-sm font-semibold text-[#071B3A]">
+          <div className="flex items-center gap-3 text-sm font-semibold text-[#123B5D]">
             <MapPin size={21} className="text-sky-500" />
             Sénégal
           </div>
@@ -229,7 +253,7 @@ export default function BlogAssurances() {
               onClick={() => setActiveCategory(category)}
               className={`shrink-0 rounded-full border px-5 py-3 text-sm font-semibold transition duration-300 ${
                 activeCategory === category
-                  ? "border-[#071B3A] bg-[#071B3A] text-white"
+                  ? "border-[#071B3A] bg-[#123B5D] text-white"
                   : "border-gray-200 bg-white text-gray-600 hover:border-sky-400 hover:text-sky-600"
               }`}
             >
@@ -238,21 +262,34 @@ export default function BlogAssurances() {
           ))}
         </div>
 
-        {/* Article principal */}
+        {/* Article principal avec rotation automatique */}
         {featuredArticle && (
           <div className="mb-12 grid overflow-hidden rounded-2xl bg-[#071B3A] shadow-xl md:grid-cols-2">
-            <div className="relative min-h-[280px] md:min-h-[400px]">
+            <div className="group relative min-h-[280px] overflow-hidden md:min-h-[400px]">
               <img
+                key={featuredArticle.id}
                 src={featuredArticle.image}
                 alt={featuredArticle.title}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071B3A]/70 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071B3A]/80 via-[#071B3A]/10 to-transparent" />
 
               <span className="absolute left-6 top-6 rounded-full bg-sky-400 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#071B3A]">
                 {featuredArticle.tag}
               </span>
+
+              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-sm font-semibold text-white">
+                <span className="flex items-center gap-2">
+                  <MapPin size={16} />
+                  {featuredArticle.location}
+                </span>
+
+                <span className="rounded-full bg-black/30 px-3 py-2 backdrop-blur-sm">
+                  {String(activeArticleIndex + 1).padStart(2, "0")} /{" "}
+                  {String(articles.length).padStart(2, "0")}
+                </span>
+              </div>
             </div>
 
             <div className="flex flex-col justify-center p-7 md:p-12">
@@ -270,14 +307,28 @@ export default function BlogAssurances() {
 
               <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-gray-300">
                 <span className="flex items-center gap-2">
-                  <MapPin size={15} />
-                  {featuredArticle.location}
+                  <CalendarDays size={15} />
+                  {featuredArticle.date}
                 </span>
 
                 <span className="flex items-center gap-2">
                   <Clock3 size={15} />
                   {featuredArticle.readTime} de lecture
                 </span>
+              </div>
+
+              {/* Indicateurs visuels non interactifs */}
+              <div className="mt-6 flex items-center gap-2">
+                {articles.map((article, index) => (
+                  <span
+                    key={article.id}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      index === activeArticleIndex
+                        ? "w-8 bg-sky-400"
+                        : "w-2 bg-white/30"
+                    }`}
+                  />
+                ))}
               </div>
 
               <button
@@ -292,55 +343,73 @@ export default function BlogAssurances() {
           </div>
         )}
 
-        {/* Grille des articles */}
+        {/* Grille des autres articles */}
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          {visibleArticles.map((article) => (
-            <article
-              key={article.id}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
-            >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
+          {visibleArticles.map((article) => {
+            const ArticleIcon = article.icon;
 
-                <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#071B3A] shadow">
-                  {article.category}
-                </span>
-              </div>
+            return (
+              <article
+                key={article.id}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
 
-              <div className="flex flex-1 flex-col p-6">
-                <div className="mb-4 flex items-center gap-2 text-xs text-gray-500">
-                  <CalendarDays size={15} className="shrink-0 text-sky-500" />
-                  {article.date}
-                  <span className="text-gray-300">•</span>
-                  <Clock3 size={15} className="shrink-0 text-sky-500" />
-                  {article.readTime}
+                  <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#123B5D] shadow">
+                    <ArticleIcon size={15} className="text-sky-500" />
+                    {article.category}
+                  </span>
                 </div>
 
-                <h3 className="text-xl font-bold leading-snug text-[#071B3A] transition group-hover:text-sky-600">
-                  {article.title}
-                </h3>
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="mb-4 flex flex-wrap items-center gap-2 text-xs text-gray-500">
+                    <CalendarDays
+                      size={15}
+                      className="shrink-0 text-sky-500"
+                    />
+                    {article.date}
+                    <span className="text-gray-300">•</span>
+                    <Clock3
+                      size={15}
+                      className="shrink-0 text-sky-500"
+                    />
+                    {article.readTime}
+                  </div>
 
-                <p className="mt-3 flex-1 text-sm leading-7 text-gray-600">
-                  {article.excerpt}
-                </p>
+                  <h3 className="text-xl font-bold leading-snug text-[#123B5D] transition group-hover:text-sky-600">
+                    {article.title}
+                  </h3>
 
-                <button
-                  type="button"
-                  onClick={() => setSelectedArticle(article)}
-                  className="mt-6 inline-flex w-fit items-center gap-2 font-bold text-[#071B3A] transition hover:text-sky-600"
-                >
-                  Lire la suite
-                  <ArrowUpRight size={18} />
-                </button>
-              </div>
-            </article>
-          ))}
+                  <p className="mt-3 flex-1 text-sm leading-7 text-gray-600">
+                    {article.excerpt}
+                  </p>
+
+                  <button
+                    type="button"
+                    onClick={() => setSelectedArticle(article)}
+                    className="mt-6 inline-flex w-fit items-center gap-2 font-bold text-[#123B5D] transition hover:text-sky-600"
+                  >
+                    Lire la suite
+                    <ArrowUpRight size={18} />
+                  </button>
+                </div>
+              </article>
+            );
+          })}
         </div>
+
+        {/* Message si aucun article */}
+        {filteredArticles.length === 0 && (
+          <p className="py-12 text-center text-gray-500">
+            Aucun article disponible dans cette catégorie.
+          </p>
+        )}
 
         {/* Bandeau de contact */}
         <div className="mt-16 flex flex-col items-start justify-between gap-6 rounded-2xl border border-sky-100 bg-sky-50 p-7 md:flex-row md:items-center md:p-10">
@@ -350,7 +419,7 @@ export default function BlogAssurances() {
             </div>
 
             <div>
-              <h3 className="text-xl font-extrabold text-[#071B3A] md:text-2xl">
+              <h3 className="text-xl font-extrabold text-[#123B5D] md:text-2xl">
                 Protégez ce qui compte pour vous.
               </h3>
 
@@ -364,7 +433,7 @@ export default function BlogAssurances() {
 
           <a
             href="/contact"
-            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#071B3A] px-6 py-4 font-semibold text-white transition hover:bg-sky-600"
+            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#123B5D] px-6 py-4 font-semibold text-white transition hover:bg-sky-600"
           >
             Nous contacter
             <ArrowRight size={19} />
@@ -425,10 +494,13 @@ export default function BlogAssurances() {
               </p>
 
               <p className="mt-6 rounded-xl border border-sky-100 bg-sky-50 p-4 text-sm leading-6 text-gray-600">
-                <strong className="text-[#071B3A]">À retenir : </strong>
-                les garanties et les conditions varient selon les contrats.
-                Consultez les documents contractuels et demandez conseil
-                à un professionnel habilité avant toute souscription.
+                <strong className="text-[#071B3A]">
+                  À retenir :{" "}
+                </strong>
+                les garanties et les conditions varient selon les
+                contrats. Consultez les documents contractuels et
+                demandez conseil à un professionnel habilité avant
+                toute souscription.
               </p>
 
               <button

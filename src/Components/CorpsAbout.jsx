@@ -199,71 +199,133 @@ export default function AboutCorps() {
   return (
     <main className="overflow-hidden bg-white text-gray-800">
       {/* 2. NOTRE HISTOIRE */}
-      <section
-        id="notre-histoire"
-        className="scroll-mt-24 px-6 py-20 sm:px-10 lg:px-16 lg:py-28"
-      >
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <div className="relative">
-            <div className="absolute -left-4 -top-4 h-28 w-28 border-l-2 border-t-2 border-[#8EC9F0] sm:-left-6 sm:-top-6" />
+     
+{/* 2. NOTRE HISTOIRE */}
+<section
+  id="notre-histoire"
+  className="scroll-mt-24 bg-white px-6 py-16 sm:px-10 lg:px-16 lg:py-24"
+>
+  <div className="mx-auto grid max-w-7xl items-stretch gap-8 lg:grid-cols-2 lg:gap-12">
 
-            <img
-              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
-              alt="Illustration d’un environnement de travail collaboratif"
-              loading="lazy"
-              className="relative z-10 h-[380px] w-full object-cover sm:h-[480px]"
-            />
+    {/* COLONNE GAUCHE : LOGO ET INFORMATIONS LÉGALES */}
+   
+{/* COLONNE GAUCHE : LOGO ET INFORMATIONS LÉGALES */}
+<div className="flex flex-col">
+  <div className="relative flex min-h-[300px] flex-1 items-center justify-center overflow-hidden border border-blue-100 bg-[#F3F8FC] px-8 py-10 sm:min-h-[360px]">
 
-            <div className="absolute -bottom-5 -right-4 z-20 max-w-xs bg-[#071D30] px-6 py-5 text-white sm:-right-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8EC9F0]">
-                Notre philosophie
-              </p>
-              <p className="mt-2 text-lg font-semibold">
-                Écouter, comprendre et rechercher des solutions.
-              </p>
-            </div>
-          </div>
+    {/* Décoration */}
+    <div className="absolute left-0 top-0 h-20 w-20 border-l-2 border-t-2 border-[#8EC9F0]" />
+    <div className="absolute bottom-0 right-0 h-20 w-20 border-b-2 border-r-2 border-[#8EC9F0]" />
 
-          <div className="pt-3 lg:pt-0">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#123B5D]">
-              01 — Notre histoire
-            </span>
+    {/* Logo réduit */}
+    <div className="relative z-10 flex flex-col items-center">
+      <img
+        src="/firdawsi-bg.png"
+        alt="Logo FIRDAWSI CONSULTING GROUP"
+        className="max-h-48 w-52 object-contain sm:max-h-52 sm:w-56"
+      />
 
-            <h2 className="mt-5 text-3xl font-bold leading-tight text-[#123B5D] sm:text-4xl">
-              Une entreprise née d’une philosophie
-            </h2>
+      <div className="mt-5 h-1 w-16 bg-[#8EC9F0]" />
 
-            <h3 className="mt-4 text-xl font-semibold text-[#123B5D]">
-              Une vision humaine, une ambition durable.
-            </h3>
+      <p className="mt-3 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-[#123B5D] sm:text-xs">
+        L’excellence au cœur de vos besoins
+      </p>
+    </div>
+  </div>
 
-            <div className="mt-7 space-y-5 text-base leading-8 text-gray-600">
-              <p>
-                FIRDAWSI CONSULTING GROUP a été créée en 2024 avec une
-                philosophie qui va au-delà des activités commerciales.
-              </p>
-              <p>
-                Le nom « Firdawsi » évoque pour sa fondatrice un idéal de
-                bonté, de foi, de sourire et de recherche de solutions plutôt
-                que de conflits. Il représente une manière d’aborder la vie et
-                les relations humaines avec bienveillance, sérénité et espoir.
-              </p>
-              <p>
-                Cette philosophie inspire l’identité de l’entreprise : écouter
-                avant d’agir, rechercher des solutions et traiter chaque
-                personne avec considération.
-              </p>
-              <p>
-                Depuis ses débuts dans les domaines du voyage, de l’immobilier
-                et de l’assurance, FCG porte l’ambition de développer une
-                entreprise structurée, crédible et tournée vers l’avenir.
-              </p>
-            </div>
+  {/* BLOC UNIQUE : NINEA ET REGISTRE DE COMMERCE */}
+  <div className="mt-4 border-l-4 border-[#8EC9F0] bg-[#071D30] p-5 text-white sm:p-6">
+    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8EC9F0]">
+      Informations légales
+    </p>
 
-            <div className="mt-8 h-1 w-20 bg-[#8EC9F0]" />
-          </div>
+    <div className="mt-4 grid gap-4 sm:grid-cols-2 sm:gap-6">
+      <div>
+        <p className="text-sm font-semibold text-white">
+          NINEA
+        </p>
+        <p className="mt-1 break-words text-sm text-gray-300">
+          012116366
+        </p>
+      </div>
+
+      <div className="sm:border-l sm:border-white/15 sm:pl-6">
+        <p className="text-sm font-semibold text-white">
+          Registre de commerce
+        </p>
+        <p className="mt-1 break-words text-sm text-gray-300">
+          SN-DKR-2025-A-17391
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    {/* COLONNE DROITE : HISTOIRE SUR FOND BLEU NUIT */}
+    <div className="relative flex flex-col justify-center overflow-hidden bg-[#071D30] p-7 text-white sm:p-10 lg:p-12">
+
+      {/* Éléments décoratifs */}
+      <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full border border-white/10" />
+      <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full border border-[#8EC9F0]/20" />
+
+      <div className="relative z-10">
+        <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-[#8EC9F0]">
+          <span className="h-px w-8 bg-[#8EC9F0]" />
+          01 — Notre histoire
+        </span>
+
+        <h2 className="mt-6 text-3xl font-bold leading-tight sm:text-4xl">
+          Une entreprise née d’une philosophie
+        </h2>
+
+        <div className="mt-5 h-1 w-20 bg-[#8EC9F0]" />
+
+        <h3 className="mt-6 text-xl font-semibold leading-relaxed text-[#8EC9F0]">
+          Une vision humaine, une ambition durable.
+        </h3>
+
+        <div className="mt-6 space-y-5 text-sm leading-7 text-gray-200 sm:text-base sm:leading-8">
+          <p>
+            FIRDAWSI CONSULTING GROUP a été créée en 2024 avec une
+            philosophie qui va au-delà des activités commerciales.
+          </p>
+
+          <p>
+            Le nom « Firdawsi » évoque pour sa fondatrice un idéal de
+            bonté, de foi, de sourire et de recherche de solutions plutôt
+            que de conflits. Il représente une manière d’aborder la vie
+            et les relations humaines avec bienveillance, sérénité et espoir.
+          </p>
+
+          <p>
+            Cette philosophie inspire l’identité de l’entreprise :
+            écouter avant d’agir, rechercher des solutions et traiter
+            chaque personne avec considération.
+          </p>
+
+          <p>
+            Depuis ses débuts dans les domaines du voyage, de l’immobilier
+            et de l’assurance, FCG porte l’ambition de développer une
+            entreprise structurée, crédible et tournée vers l’avenir.
+          </p>
         </div>
-      </section>
+
+        {/* Signature visuelle */}
+        <div className="mt-8 border-t border-white/15 pt-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8EC9F0]">
+            FIRDAWSI CONSULTING GROUP
+          </p>
+          <p className="mt-2 text-sm text-gray-300">
+            Écouter, comprendre et rechercher des solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       {/* 3. LE MOT DE LA FONDATRICE */}
       <section className="bg-[#F3F8FC] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
@@ -304,6 +366,7 @@ export default function AboutCorps() {
                 principes : le respect, la confiance, l’écoute et la volonté de
                 progresser.
               </p>
+                <Quote size={46} className="mb-5 text-[#8EC9F0]" />
             </div>
 
             <div className="mt-8 border-t border-gray-200 pt-6">
@@ -424,97 +487,107 @@ export default function AboutCorps() {
       </section>
 
       {/* 7. NOS VALEURS */}
-      <section className="bg-[#F3F8FC] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="06 — Ce qui nous guide"
-            title="Nos valeurs"
-            description="Les principes qui inspirent notre approche et nos relations au quotidien."
-          />
+     
+<section className="bg-[#F3F8FC] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+  <div className="mx-auto max-w-7xl">
+    <SectionHeading
+      eyebrow="06 — Ce qui nous guide"
+      title="Nos valeurs"
+      description="Les principes qui inspirent notre approche et nos relations au quotidien."
+    />
 
-          <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map((value, index) => {
-              const Icon = value.icon;
+    <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      {values.map((value, index) => {
+        const Icon = value.icon;
 
-              return (
-                <article key={value.title} className="group">
-                  <div className="mb-5 flex items-center justify-between">
-                    <span className="text-sm font-bold tracking-widest text-[#123B5D]">
-                      0{index + 1}
-                    </span>
+        return (
+          <article key={value.title} className="group">
+            <div className="mb-5 flex items-center justify-between">
+              <span className="text-sm font-bold tracking-widest text-[#123B5D]">
+                0{index + 1}
+              </span>
 
-                    <div className="flex h-14 w-14 items-center justify-center border border-[#8EC9F0] bg-white text-[#123B5D] transition duration-300 group-hover:bg-[#123B5D] group-hover:text-white">
-                      <Icon size={25} strokeWidth={1.6} />
-                    </div>
-                  </div>
+              <div className="flex h-14 w-14 items-center justify-center border border-[#8EC9F0] bg-white text-sky-600 transition duration-300 group-hover:bg-[#123B5D] group-hover:text-white">
+                <Icon size={25} strokeWidth={1.6} />
+              </div>
+            </div>
 
-                  <h3 className="text-xl font-bold text-[#123B5D]">
-                    {value.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
-                    {value.description}
-                  </p>
-                  <div className="mt-6 h-px w-full bg-gray-200 transition-colors group-hover:bg-[#8EC9F0]" />
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+            <h3 className="text-xl font-bold text-[#123B5D]">
+              {value.title}
+            </h3>
+
+            <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
+              {value.description}
+            </p>
+
+            <div className="mt-6 h-px w-full bg-gray-200 transition-colors group-hover:bg-[#8EC9F0]" />
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
 
       {/* 8. POURQUOI CHOISIR FCG */}
-      <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#123B5D]">
-              07 — Notre engagement
+      
+<section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+  <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+    <div>
+      <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#123B5D]">
+        07 — Notre engagement
+      </span>
+
+      <h2 className="mt-5 text-3xl font-bold leading-tight text-[#123B5D] sm:text-5xl">
+        Pourquoi choisir FCG ?
+      </h2>
+
+      <p className="mt-6 text-lg leading-8 text-gray-600">
+        Choisir FIRDAWSI CONSULTING GROUP, c’est privilégier une
+        approche attentive à vos besoins et à vos objectifs.
+      </p>
+
+      <div className="mt-8 flex items-center gap-4 border-l-2 border-[#8EC9F0] py-2 pl-5">
+        <Users size={30} className="shrink-0 text-sky-600" />
+
+        <p className="text-sm font-medium leading-6 text-[#123B5D]">
+          Une approche humaine et professionnelle, centrée sur vos
+          besoins.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <p className="mb-7 text-sm font-semibold uppercase tracking-widest text-gray-500">
+        Nous souhaitons vous offrir
+      </p>
+
+      <ul className="space-y-5">
+        {commitments.map((commitment) => (
+          <li
+            key={commitment}
+            className="flex items-start gap-4 border-b border-gray-100 pb-5"
+          >
+            <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center bg-[#F3F8FC] text-sky-600">
+              <CheckCircle2 size={19} />
             </span>
-            <h2 className="mt-5 text-3xl font-bold leading-tight text-[#123B5D] sm:text-5xl">
-              Pourquoi choisir FCG ?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Choisir FIRDAWSI CONSULTING GROUP, c’est privilégier une
-              approche attentive à vos besoins et à vos objectifs.
-            </p>
 
-            <div className="mt-8 flex items-center gap-4 border-l-2 border-[#8EC9F0] py-2 pl-5">
-              <Users size={30} className="shrink-0 text-[#123B5D]" />
-              <p className="text-sm font-medium leading-6 text-[#123B5D]">
-                Une approche humaine et professionnelle, centrée sur vos
-                besoins.
-              </p>
-            </div>
-          </div>
+            <span className="pt-1 leading-7 text-gray-700">
+              {commitment}
+            </span>
+          </li>
+        ))}
+      </ul>
 
-          <div>
-            <p className="mb-7 text-sm font-semibold uppercase tracking-widest text-gray-500">
-              Nous souhaitons vous offrir
-            </p>
+      <p className="mt-7 border-l-2 border-[#123B5D] pl-5 text-sm leading-7 text-gray-500">
+        Notre engagement est de vous accompagner avec sérieux, en
+        expliquant clairement les possibilités, les conditions et les
+        limites de chaque démarche.
+      </p>
+    </div>
+  </div>
+</section>
 
-            <ul className="space-y-5">
-              {commitments.map((commitment) => (
-                <li
-                  key={commitment}
-                  className="flex items-start gap-4 border-b border-gray-100 pb-5"
-                >
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center bg-[#F3F8FC] text-[#123B5D]">
-                    <CheckCircle2 size={19} />
-                  </span>
-                  <span className="pt-1 leading-7 text-gray-700">
-                    {commitment}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-7 border-l-2 border-[#123B5D] pl-5 text-sm leading-7 text-gray-500">
-              Notre engagement est de vous accompagner avec sérieux, en
-              expliquant clairement les possibilités, les conditions et les
-              limites de chaque démarche.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* 9. APPEL À L’ACTION FINAL */}
       <section className="relative overflow-hidden bg-[#071D30] px-6 py-20 text-white sm:px-10 lg:px-16 lg:py-24">

@@ -238,12 +238,12 @@ export default function SectionFAQ() {
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-100 bg-sky-50 px-4 py-2">
             <CircleHelp size={17} style={{ color: SKY }} />
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#071B3A]">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#123B5D]">
               Centre d'aide
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-[#071B3A] sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
             Toutes les réponses à{" "}
             <span style={{ color: SKY }}>vos questions.</span>
           </h2>
@@ -291,7 +291,7 @@ export default function SectionFAQ() {
       <button
         type="button"
         onClick={() => handleSearch("")}
-        className="shrink-0 whitespace-nowrap text-xs font-semibold text-slate-500 hover:text-[#071B3A]"
+        className="shrink-0 whitespace-nowrap text-xs font-semibold text-slate-500 hover:text-[#123B5D]"
       >
         Effacer
       </button>
@@ -313,7 +313,7 @@ export default function SectionFAQ() {
                 aria-pressed={isActive}
                 className={`inline-flex items-center gap-2 rounded-full border px-4 py-3 text-xs font-semibold transition-all sm:text-sm ${
                   isActive
-                    ? "border-[#071B3A] bg-[#071B3A] text-white shadow-md"
+                    ? "border-[#071B3A] bg-[#123B5D] text-white shadow-md"
                     : "border-slate-200 bg-white text-slate-600 hover:border-sky-300 hover:text-[#071B3A]"
                 }`}
               >
@@ -340,7 +340,7 @@ export default function SectionFAQ() {
               <button
                 type="button"
                 onClick={() => handleCategoryChange("Toutes")}
-                className="text-xs font-semibold text-sky-700 hover:text-[#071B3A]"
+                className="text-xs font-semibold text-sky-700 hover:text-[#123B5D]"
               >
                 Voir toutes les questions
               </button>
@@ -359,12 +359,12 @@ export default function SectionFAQ() {
                     className="scroll-mt-24"
                   >
                     <div className="mb-3 flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#071B3A] text-white">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#123B5D] text-white">
                         <Icon size={22} />
                       </div>
 
                       <div className="min-w-0">
-                        <h3 className="text-lg font-bold text-[#071B3A] sm:text-xl">
+                        <h3 className="text-lg font-bold text-[#123B5D] sm:text-xl">
                           {section.category}
                         </h3>
                         <p className="mt-1 text-sm leading-6 text-slate-500">
@@ -405,7 +405,7 @@ export default function SectionFAQ() {
                 size={32}
               />
 
-              <h3 className="font-bold text-[#071B3A]">
+              <h3 className="font-bold text-[#123B5D]">
                 Aucune question trouvée
               </h3>
 
@@ -419,7 +419,7 @@ export default function SectionFAQ() {
                   handleSearch("");
                   handleCategoryChange("Toutes");
                 }}
-                className="mt-5 text-sm font-semibold text-sky-700 hover:text-[#071B3A]"
+                className="mt-5 text-sm font-semibold text-sky-700 hover:text-[#123B5D]"
               >
                 Réinitialiser la recherche
               </button>
@@ -453,7 +453,7 @@ export default function SectionFAQ() {
 
             <a
               href="/contact"
-              className="inline-flex max-w-full shrink-0 items-center justify-center gap-3 rounded-xl bg-sky-400 px-5 py-4 text-sm font-bold text-[#071B3A] transition hover:bg-white sm:px-6"
+              className="inline-flex max-w-full shrink-0 items-center justify-center gap-3 rounded-xl bg-sky-400 px-5 py-4 text-sm font-bold text-[#123B5D] transition hover:bg-white sm:px-6"
             >
               Contacter notre équipe
               <ArrowRight size={18} />
@@ -461,7 +461,7 @@ export default function SectionFAQ() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-xs leading-6 text-slate-400">
+        <p className="mt-8 text-center text-xs leading-6 text-slate-500">
           Les démarches, conditions et garanties peuvent varier selon votre
           situation et les organismes concernés. Les informations officielles
           et les documents contractuels applicables restent les références.

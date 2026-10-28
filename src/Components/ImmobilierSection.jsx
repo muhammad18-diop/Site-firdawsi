@@ -175,7 +175,7 @@ function ServiceImmobilier({ service, index }) {
 
           <a
             href="/contact"
-            className="group mt-9 inline-flex w-full items-center justify-between gap-4 border border-[#123B5D] px-5 py-4 text-sm font-semibold text-[#123B5D] transition-all duration-300 hover:border-[#123B5D] hover:bg-[#123B5D] hover:text-white sm:w-auto sm:min-w-[280px]"
+            className="inline-flex items-center gap-3  mt-6 rounded-lg bg-sky-600 px-5 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-[#123B5D] focus:outline-none focus:ring-4 focus:ring-sky-600/30"
           >
             <span>{service.label}</span>
             <ArrowUpRight

@@ -48,7 +48,7 @@ export default function CoordonneesContact() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#071B3A] sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
             Nos coordonnées
           </h2>
 
@@ -81,12 +81,12 @@ export default function CoordonneesContact() {
                   }
                   className="group flex items-center gap-4 py-6 first:pt-0 last:pb-0 sm:gap-5"
                 >
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#071B3A] text-sky-300 transition duration-300 group-hover:bg-sky-500 group-hover:text-white">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#071B3A] text-sky-600 transition duration-300 group-hover:bg-sky-500 group-hover:text-white">
                     <Icon size={24} strokeWidth={1.8} />
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-bold text-[#071B3A]">
+                    <h3 className="font-bold text-[#123B5D]">
                       {contact.title}
                     </h3>
 
@@ -94,7 +94,7 @@ export default function CoordonneesContact() {
                       {contact.description}
                     </p>
 
-                    <p className="mt-2 break-words text-sm font-semibold text-sky-700">
+                    <p className="mt-2 break-words text-sm font-semibold text-sky-600">
                       {contact.value}
                     </p>
                   </div>

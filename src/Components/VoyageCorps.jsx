@@ -143,13 +143,13 @@ const prestationsVoyage = [
 export default function VoyagesServices() {
   return (
     <main className="overflow-hidden bg-white text-slate-800">
-      {/* Introduction : sans Hero */}
+      {/* INTRODUCTION */}
       <section className="px-6 pb-14 pt-10 sm:pb-16 sm:pt-14 lg:px-10">
         <div className="mx-auto max-w-4xl text-center">
           <span className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#123B5D]">
-            <span className="h-px w-8 bg-[#8EC9F0]" />
+            <span className="h-px w-8 bg-sky-600" />
             Nos services de voyage
-            <span className="h-px w-8 bg-[#8EC9F0]" />
+            <span className="h-px w-8 bg-sky-600" />
           </span>
 
           <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
@@ -168,7 +168,7 @@ export default function VoyagesServices() {
               <a
                 key={service.id}
                 href={`#${service.id}`}
-                className="rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-[#123B5D] transition duration-300 hover:border-[#8EC9F0] hover:bg-[#8EC9F0]/10"
+                className="rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-[#123B5D] transition duration-300 hover:border-sky-600 hover:bg-sky-600/10"
               >
                 {service.categorie}
               </a>
@@ -177,7 +177,7 @@ export default function VoyagesServices() {
         </div>
       </section>
 
-      {/* Les six prestations : alternance image et texte conservée */}
+      {/* LES SIX PRESTATIONS */}
       <section className="px-6 pb-20 lg:px-10 lg:pb-28">
         <div className="mx-auto max-w-screen-xl space-y-20 lg:space-y-28">
           {prestationsVoyage.map((service, index) => {
@@ -190,7 +190,7 @@ export default function VoyagesServices() {
                 id={service.id}
                 className="grid scroll-mt-24 items-center gap-8 lg:grid-cols-2 lg:gap-16"
               >
-                {/* Image */}
+                {/* IMAGE */}
                 <div
                   className={`relative ${
                     imageAGauche
@@ -218,7 +218,7 @@ export default function VoyagesServices() {
                     </span>
 
                     <div className="absolute bottom-6 left-6 right-6 flex items-center gap-4 text-white">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/15 backdrop-blur-md">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-sky-600/40 bg-white/15 text-sky-600 backdrop-blur-md">
                         <Icon size={24} strokeWidth={1.7} />
                       </div>
 
@@ -233,10 +233,10 @@ export default function VoyagesServices() {
                     </div>
                   </div>
 
-                  <div className="absolute -bottom-3 -right-3 -z-10 h-24 w-24 rounded-2xl bg-[#8EC9F0]/25" />
+                  <div className="absolute -bottom-3 -right-3 -z-10 h-24 w-24 rounded-2xl bg-sky-600/15" />
                 </div>
 
-                {/* Texte */}
+                {/* TEXTE */}
                 <div
                   className={`relative py-2 lg:py-8 ${
                     imageAGauche
@@ -256,7 +256,8 @@ export default function VoyagesServices() {
                     {service.description}
                   </p>
 
-                  <div className="my-7 h-px w-full bg-slate-200" />
+                  {/* TRAIT SÉPARATEUR SKY-600 */}
+                  <div className="my-7 h-px w-full bg-sky-600" />
 
                   <ul className="space-y-4">
                     {service.avantages.map((avantage) => (
@@ -266,24 +267,25 @@ export default function VoyagesServices() {
                       >
                         <CheckCircle2
                           size={20}
-                          className="mt-0.5 shrink-0 text-[#123B5D]"
+                          className="mt-0.5 shrink-0 text-sky-600"
                         />
                         <span>{avantage}</span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* Précision utile selon la prestation */}
-                  <div className="mt-6 rounded-lg border-l-4 border-[#8EC9F0] bg-slate-50 px-4 py-3">
+                  {/* PRÉCISION SUR LA PRESTATION */}
+                  <div className="mt-6 rounded-lg border-l-4 border-sky-600 bg-slate-50 px-4 py-3">
                     <p className="text-sm leading-6 text-slate-600">
                       {service.note}
                     </p>
                   </div>
 
+                  {/* BOUTONS */}
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <a
                       href={service.lien}
-                      className="inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-5 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-[#071D30] focus:outline-none focus:ring-4 focus:ring-[#8EC9F0]/50"
+                      className="inline-flex items-center gap-3 rounded-lg bg-sky-600 px-5 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-[#123B5D] focus:outline-none focus:ring-4 focus:ring-sky-600/30"
                     >
                       {service.bouton}
                       <ArrowUpRight size={18} />
@@ -291,7 +293,7 @@ export default function VoyagesServices() {
 
                     <a
                       href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D] transition duration-300 hover:text-slate-500"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D] transition duration-300 hover:text-sky-600"
                     >
                       Poser une question
                       <ArrowRight size={17} />
@@ -304,14 +306,14 @@ export default function VoyagesServices() {
         </div>
       </section>
 
-      {/* Appel à l’action final : sans Hero supplémentaire */}
+      {/* APPEL À L’ACTION FINAL */}
       <section className="relative overflow-hidden bg-[#071D30] px-6 py-16 sm:py-20 lg:px-10">
         <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full border border-white/10" />
         <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full border border-white/10" />
 
         <div className="relative mx-auto flex max-w-screen-xl flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="max-w-2xl">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#8EC9F0]">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
               Votre prochain départ
             </span>
 
@@ -329,7 +331,7 @@ export default function VoyagesServices() {
 
           <a
             href="/contact"
-            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#8EC9F0] px-6 py-4 font-semibold text-[#071D30] transition duration-300 hover:bg-white"
+            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-sky-600 px-6 py-4 font-semibold text-white transition duration-300 hover:bg-white hover:text-[#071D30]"
           >
             Présenter mon projet
             <ArrowUpRight size={19} />

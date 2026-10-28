@@ -135,7 +135,7 @@ export default function FormulaireContact() {
             </span>
           </div>
 
-          <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-[#071B3A] sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
             Comment pouvons-nous vous aider ?
           </h2>
 
@@ -153,7 +153,7 @@ export default function FormulaireContact() {
               </div>
 
               <div>
-                <h3 className="font-bold text-[#071B3A]">
+                <h3 className="font-bold text-[#123B5D]">
                   Un accompagnement adapté
                 </h3>
                 <p className="mt-1 text-sm leading-6 text-slate-500">
@@ -169,7 +169,7 @@ export default function FormulaireContact() {
               </div>
 
               <div>
-                <h3 className="font-bold text-[#071B3A]">
+                <h3 className="font-bold text-[#123B5D]">
                   Vos informations
                 </h3>
                 <p className="mt-1 text-sm leading-6 text-slate-500">
@@ -181,7 +181,7 @@ export default function FormulaireContact() {
           </div>
 
           <div className="mt-10 border-l-4 border-sky-500 pl-5">
-            <p className="text-lg font-semibold leading-7 text-[#071B3A]">
+            <p className="text-lg font-semibold leading-7 text-[#123B5D]">
               FIRDAWSI CONSULTING GROUP
             </p>
             <p className="mt-1 text-sm text-slate-500">
@@ -197,7 +197,7 @@ export default function FormulaireContact() {
           className="min-w-0 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8 lg:p-10"
         >
           <div className="mb-8 border-b border-slate-100 pb-6">
-            <h3 className="text-2xl font-bold text-[#071B3A]">
+            <h3 className="text-2xl font-bold text-[#123B5D]">
               Envoyez-nous un message
             </h3>
 
@@ -460,7 +460,7 @@ export default function FormulaireContact() {
 
           <button
             type="submit"
-            className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-lg bg-[#071B3A] px-6 py-4 font-bold text-white transition hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-200"
+            className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-lg bg-[#123B5D] px-6 py-4 font-bold text-white transition hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-200"
           >
             Envoyer ma demande
            

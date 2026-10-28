@@ -1,127 +1,126 @@
 
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {
-  Globe,
-  ChevronDown,
-  Menu,
-  X,
-  ArrowRight,
-} from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
-function Navbar() {
+const liensNavigation = [
+  { nom: "Accueil", chemin: "/accueil" },
+  { nom: "À propos", chemin: "/about" },
+  { nom: "Services", chemin: "/services" },
+  { nom: "Actualités", chemin: "/actualite" },
+  { nom: "Témoignages", chemin: "/temoignages" },
+  { nom: "FAQ", chemin: "/faq" },
+  { nom: "Contact", chemin: "/contact" },
+];
+
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [languageOpen, setLanguageOpen] = useState(false);
-  const [language, setLanguage] = useState("Français (FR)");
 
-  const languages = [
-    "Français (FR)",
-    "English (US)",
-    "Deutsch",
-    "Italiano",
-    "Español",
-  ];
+  const fermerMenu = () => setMenuOpen(false);
 
-  const links = [
-    { label: "Accueil", path: "/accueil" },
-    { label: "À propos", path: "/about" },
-    { label: "Services", path: "/services" },
-    { label: "Actualités", path: "/actualite" },
-    { label: "Témoignages", path: "/temoignages" },
-    { label: "FAQ", path: "/faq" },
-    { label: "Contact", path: "/contact" },
-  ];
+  const classeLien = ({ isActive }) =>
+    `relative whitespace-nowrap py-2 text-sm font-semibold transition-colors duration-200 ${
+      isActive
+        ? "text-sky-600"
+        : "text-[#123B5D] hover:text-sky-600"
+    }`;
 
   return (
-    <nav className="fixed start-0 top-0 z-50 w-full border-b border-blue-100 bg-white/95 shadow-sm backdrop-blur-md">
-      <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-4 px-4 py-3 lg:px-10">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-blue-100 bg-white/95 shadow-sm backdrop-blur-md">
+      <div className="mx-auto flex max-w-screen-2xl items-center justify-between gap-3 px-4 py-1.5 lg:px-10">
 
-        {/* Logo */}
-      
-<Link
-  to="/"
-  onClick={() => setMenuOpen(false)}
-  className="flex shrink-0 items-center gap-3"
->
-  <img
-    src="/firdawsi-bg.png"
-    alt="Logo Firdawsi Consulting Group"
-    className="h-20 w-24 object-contain sm:h-24 sm:w-28"
-  />
-</Link>
+        {/* LOGO */}
+        <Link
+          to="/"
+          onClick={fermerMenu}
+          className="flex shrink-0 items-center"
+          aria-label="Firdawsi Consulting Group - Accueil"
+        >
+          <img
+            src="/firdawsi-bg.png"
+            alt="Logo Firdawsi Consulting Group"
+            className="h-16 w-20 object-contain sm:h-[4.5rem] sm:w-24"
+          />
+        </Link>
 
+        {/* NAVIGATION DESKTOP */}
+        <div className="hidden items-center gap-5 lg:flex xl:gap-7">
+          {liensNavigation.map((lien) => (
+            <NavLink
+              key={lien.chemin}
+              to={lien.chemin}
+              className={classeLien}
+            >
+              {({ isActive }) => (
+                <>
+                  {lien.nom}
+                  {isActive && (
+                    <span className="absolute inset-x-0 -bottom-1 h-0.5 rounded-full bg-sky-500" />
+                  )}
+                </>
+              )}
+            </NavLink>
+          ))}
+        </div>
 
-          
+        {/* BOUTON CONTACT DESKTOP */}
+        <Link
+          to="/contact"
+          className="hidden shrink-0 items-center gap-2 rounded-lg bg-sky-600 px-3 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-sky-700 sm:inline-flex"
+        >
+          Nous contacter
+          <ArrowRight size={16} />
+        </Link>
 
-        {/* Actions */}
-        <div className="flex items-center gap-2 lg:order-3">
+        {/* BOUTON MENU MOBILE */}
+        <button
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-blue-100 text-[#123B5D] transition hover:bg-blue-50 lg:hidden"
+          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <X size={21} /> : <Menu size={21} />}
+        </button>
+      </div>
 
-          
+      {/* MENU MOBILE */}
+      <div
+        className={`overflow-hidden border-t border-blue-100 bg-white transition-all duration-300 lg:hidden ${
+          menuOpen
+            ? "max-h-[600px] opacity-100"
+            : "max-h-0 border-t-0 opacity-0"
+        }`}
+      >
+        <div className="space-y-1 px-4 py-3">
+          {liensNavigation.map((lien) => (
+            <NavLink
+              key={lien.chemin}
+              to={lien.chemin}
+              onClick={fermerMenu}
+              className={({ isActive }) =>
+                `block rounded-lg px-4 py-2.5 text-sm font-semibold transition ${
+                  isActive
+                    ? "bg-blue-50 text-sky-600"
+                    : "text-[#123B5D] hover:bg-blue-50 hover:text-sky-600"
+                }`
+              }
+            >
+              {lien.nom}
+            </NavLink>
+          ))}
 
-          {/* Contact */}
+          {/* BOUTON CONTACT MOBILE */}
           <Link
             to="/contact"
-            className="hidden items-center gap-2 rounded-lg bg-sky-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-950 sm:inline-flex"
+            onClick={fermerMenu}
+            className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-700"
           >
             Nous contacter
-            <ArrowRight size={17} />
-          </Link>
-
-          {/* Menu mobile */}
-          <button
-            type="button"
-            onClick={() => {
-              setMenuOpen(!menuOpen);
-              setLanguageOpen(false);
-            }}
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-blue-950 transition hover:bg-blue-50 lg:hidden"
-            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            aria-expanded={menuOpen}
-          >
-            {menuOpen ? <X size={25} /> : <Menu size={25} />}
-          </button>
-        </div>
-
-        {/* Navigation */}
-        <div
-          className={`${
-            menuOpen ? "block" : "hidden"
-          } order-3 w-full lg:order-2 lg:block lg:w-auto`}
-        >
-          <ul className="flex flex-col gap-1 rounded-xl bg-blue-50/70 p-3 font-medium lg:flex-row lg:items-center lg:gap-5 lg:bg-transparent lg:p-0">
-            {links.map((link) => (
-              <li key={link.path}>
-                <NavLink
-                  to={link.path}
-                  end={link.path === "/"}
-                  onClick={() => setMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `block rounded-lg px-3 py-2 text-base transition lg:px-0 lg:py-3 ${
-                      isActive
-                        ? "bg-sky-100 font-bold text-sky-600 lg:bg-transparent lg:text-sky-600 underline lg:underline-offset-4"
-                        : "text-sky-650 hover:bg-sky-100 lg:hover:bg-transparent lg:hover:text-sky-600"
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-
-          {/* Contact sur mobile */}
-          <Link
-            to="/contact"
-            onClick={() => setMenuOpen(false)}
-            className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-sky-600 px-4 py-3 font-semibold text-white sm:hidden"
-          >
-            Nous contacter <ArrowRight size={17} />
+            <ArrowRight size={16} />
           </Link>
         </div>
-
       </div>
     </nav>
   );
 }
-
-export default Navbar;

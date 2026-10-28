@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -7,10 +7,6 @@ import {
   Clock3,
   MapPin,
   House,
-  Building2,
-  KeyRound,
-  ShieldCheck,
-  Wallet,
   BookOpen,
   X,
 } from "lucide-react";
@@ -24,7 +20,8 @@ const articles = [
     category: "Actualités immobilières",
     date: "14 octobre 2026",
     readTime: "5 min",
-    title: "Dakar : le marché locatif évolue, quels changements pour les locataires ?",
+    title:
+      "Dakar : le marché locatif évolue, quels changements pour les locataires ?",
     excerpt:
       "Le marché locatif dakarois connaît des évolutions, notamment dans le segment haut de gamme. Découvrez les tendances à surveiller avant de louer.",
     image:
@@ -47,7 +44,8 @@ Conseil FIRDAWSI : comparez les offres du quartier, visitez le logement et lisez
     category: "Foncier et sécurité",
     date: "Guide pratique",
     readTime: "6 min",
-    title: "Acheter un terrain au Sénégal : les vérifications indispensables",
+    title:
+      "Acheter un terrain au Sénégal : les vérifications indispensables",
     excerpt:
       "Avant de verser de l'argent pour un terrain, prenez le temps de vérifier les documents, les droits sur le bien et sa situation administrative.",
     image:
@@ -72,7 +70,8 @@ Conseil FIRDAWSI : faites contrôler le dossier par un notaire ou un professionn
     category: "Logement et habitat",
     date: "25 février 2026",
     readTime: "5 min",
-    title: "Logement au Sénégal : quelles pistes pour faciliter l'accès à la propriété ?",
+    title:
+      "Logement au Sénégal : quelles pistes pour faciliter l'accès à la propriété ?",
     excerpt:
       "L'accès au logement reste un enjeu national. Les orientations publiques mettent notamment l'accent sur le financement, le foncier et le logement social.",
     image:
@@ -95,7 +94,8 @@ Conseil FIRDAWSI : avant de souscrire à un programme immobilier, demandez un do
     category: "Investissement immobilier",
     date: "30 septembre 2026",
     readTime: "6 min",
-    title: "Investir dans l'immobilier au Sénégal : privilégier la sécurité et la rentabilité",
+    title:
+      "Investir dans l'immobilier au Sénégal : privilégier la sécurité et la rentabilité",
     excerpt:
       "Emplacement, documents fonciers, coûts d'entretien et revenus locatifs : les critères à analyser avant d'investir.",
     image:
@@ -126,8 +126,21 @@ const categories = [
 ];
 
 export default function BlogImmobilier() {
-  const [activeCategory, setActiveCategory] = useState("Tous les articles");
+  const [activeCategory, setActiveCategory] =
+    useState("Tous les articles");
   const [selectedArticle, setSelectedArticle] = useState(null);
+  const [activeArticleIndex, setActiveArticleIndex] = useState(0);
+
+  // Rotation automatique toutes les 2 secondes.
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveArticleIndex(
+        (current) => (current + 1) % articles.length
+      );
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const filteredArticles =
     activeCategory === "Tous les articles"
@@ -137,7 +150,9 @@ export default function BlogImmobilier() {
         );
 
   const featuredArticle =
-    activeCategory === "Tous les articles" ? articles[0] : null;
+    activeCategory === "Tous les articles"
+      ? articles[activeArticleIndex]
+      : null;
 
   const visibleArticles = filteredArticles.filter(
     (article) => article.id !== featuredArticle?.id
@@ -149,7 +164,7 @@ export default function BlogImmobilier() {
       className="bg-white py-20 md:py-28"
     >
       <div className="mx-auto max-w-screen-xl px-6 lg:px-10">
-        {/* En-tête de la section */}
+        {/* En-tête */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
             <div className="mb-4 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.22em] text-sky-600">
@@ -157,7 +172,7 @@ export default function BlogImmobilier() {
               Le magazine immobilier
             </div>
 
-            <h2 className="text-3xl font-extrabold leading-tight text-[#071B3A] md:text-5xl">
+            <h2 className="text-3xl font-extrabold leading-tight text-[#123B5D] md:text-5xl">
               L'immobilier au Sénégal,
               <span className="text-sky-500">
                 {" "}mieux comprendre pour mieux investir.
@@ -172,7 +187,7 @@ export default function BlogImmobilier() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 text-sm font-semibold text-[#071B3A]">
+          <div className="flex items-center gap-3 text-sm font-semibold text-[#123B5D]">
             <MapPin size={21} className="text-sky-500" />
             100 % Sénégal
           </div>
@@ -187,7 +202,7 @@ export default function BlogImmobilier() {
               onClick={() => setActiveCategory(category)}
               className={`shrink-0 rounded-full border px-5 py-3 text-sm font-semibold transition duration-300 ${
                 activeCategory === category
-                  ? "border-[#071B3A] bg-[#071B3A] text-white"
+                  ? "border-[#071B3A] bg-[#123B5D] text-white"
                   : "border-gray-200 bg-white text-gray-600 hover:border-sky-400 hover:text-sky-600"
               }`}
             >
@@ -196,21 +211,33 @@ export default function BlogImmobilier() {
           ))}
         </div>
 
-        {/* Article principal */}
+        {/* Article principal avec rotation automatique */}
         {featuredArticle && (
           <div className="mb-12 grid overflow-hidden rounded-2xl bg-[#071B3A] shadow-xl md:grid-cols-2">
-            <div className="relative min-h-[280px] md:min-h-[400px]">
+            <div className="group relative min-h-[280px] overflow-hidden md:min-h-[400px]">
               <img
+                key={featuredArticle.id}
                 src={featuredArticle.image}
                 alt={featuredArticle.title}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071B3A]/70 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071B3A]/80 via-[#071B3A]/10 to-transparent" />
 
               <span className="absolute left-6 top-6 rounded-full bg-sky-400 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#071B3A]">
                 {featuredArticle.tag}
               </span>
+
+              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-sm font-semibold text-white">
+                <span className="flex items-center gap-2">
+                  <MapPin size={16} />
+                  {featuredArticle.location}
+                </span>
+
+                <span className="rounded-full bg-black/30 px-3 py-2 backdrop-blur-sm">
+                  0{activeArticleIndex + 1} / 0{articles.length}
+                </span>
+              </div>
             </div>
 
             <div className="flex flex-col justify-center p-7 md:p-12">
@@ -228,14 +255,28 @@ export default function BlogImmobilier() {
 
               <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-gray-300">
                 <span className="flex items-center gap-2">
-                  <MapPin size={15} />
-                  {featuredArticle.location}
+                  <CalendarDays size={15} />
+                  {featuredArticle.date}
                 </span>
 
                 <span className="flex items-center gap-2">
                   <Clock3 size={15} />
                   {featuredArticle.readTime} de lecture
                 </span>
+              </div>
+
+              {/* Indicateurs visuels non interactifs */}
+              <div className="mt-6 flex items-center gap-2">
+                {articles.map((article, index) => (
+                  <span
+                    key={article.id}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      index === activeArticleIndex
+                        ? "w-8 bg-sky-400"
+                        : "w-2 bg-white/30"
+                    }`}
+                  />
+                ))}
               </div>
 
               <button
@@ -265,13 +306,13 @@ export default function BlogImmobilier() {
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#071B3A] shadow">
+                <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#123B5D] shadow">
                   {article.category}
                 </span>
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <div className="mb-4 flex items-center gap-2 text-xs text-gray-500">
+                <div className="mb-4 flex flex-wrap items-center gap-2 text-xs text-gray-500">
                   <CalendarDays
                     size={15}
                     className="shrink-0 text-sky-500"
@@ -285,7 +326,7 @@ export default function BlogImmobilier() {
                   {article.readTime}
                 </div>
 
-                <h3 className="text-xl font-bold leading-snug text-[#071B3A] transition group-hover:text-sky-600">
+                <h3 className="text-xl font-bold leading-snug text-[#123B5D] transition group-hover:text-sky-600">
                   {article.title}
                 </h3>
 
@@ -296,7 +337,7 @@ export default function BlogImmobilier() {
                 <button
                   type="button"
                   onClick={() => setSelectedArticle(article)}
-                  className="mt-6 inline-flex w-fit items-center gap-2 font-bold text-[#071B3A] transition hover:text-sky-600"
+                  className="mt-6 inline-flex w-fit items-center gap-2 font-bold text-[#123B5D] transition hover:text-sky-600"
                 >
                   Lire la suite
                   <ArrowUpRight size={18} />
@@ -321,7 +362,7 @@ export default function BlogImmobilier() {
             </div>
 
             <div>
-              <h3 className="text-xl font-extrabold text-[#071B3A] md:text-2xl">
+              <h3 className="text-xl font-extrabold text-[#123B5D] md:text-2xl">
                 Votre projet immobilier mérite un accompagnement sérieux.
               </h3>
 
@@ -334,7 +375,7 @@ export default function BlogImmobilier() {
 
           <a
             href="/contact"
-            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#071B3A] px-6 py-4 font-semibold text-white transition hover:bg-sky-600"
+            className="inline-flex shrink-0 items-center gap-3 rounded-lg bg-[#123B5D] px-6 py-4 font-semibold text-white transition hover:bg-sky-600"
           >
             Nous contacter
             <ArrowRight size={19} />
@@ -403,7 +444,7 @@ export default function BlogImmobilier() {
                   <a
                     href={selectedArticle.source}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-[#071B3A]"
                   >
                     Consulter la source : {selectedArticle.sourceLabel}

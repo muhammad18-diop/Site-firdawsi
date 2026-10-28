@@ -58,7 +58,6 @@ function HeroApropos() {
 
   return (
     <section className="relative mt-10 flex min-h-[85vh] items-center overflow-hidden bg-[#071B3A]">
-
       {/* Images du diaporama */}
       {images.map((image, index) => (
         <div
@@ -75,20 +74,24 @@ function HeroApropos() {
 
       {/* Contenu */}
       <div className="relative z-10 mx-auto w-full max-w-screen-xl px-6 py-20 lg:px-10">
-
         <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-sky-300 md:text-sm">
           <span className="h-px w-10 bg-sky-400" />
-          Qui sommes nous ?
+          Qui sommes-nous ?
         </p>
 
         <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
-          FIRDAWSI CONSULTING GROUP, l'excellence au coeur de vos besions.
-          <span className="block text-sky-400">
-            
-          </span>
+          FIRDAWSI CONSULTING GROUP, l’excellence au cœur de vos besoins.
         </h1>
 
-        
+        {/* Présentation de l'entreprise */}
+        <p className="mb-8 max-w-3xl text-base leading-8 text-gray-200 md:text-lg">
+          FIRDAWSI CONSULTING GROUP propose des solutions adaptées aux
+          particuliers et aux professionnels dans les domaines du voyage, de
+          l’assistance visa, des études à l’étranger, de l’assurance et de
+          l’immobilier. Chaque prestation repose sur une approche personnalisée,
+          la confiance et le professionnalisme, avec pour objectif de répondre
+          efficacement aux besoins et aux attentes de chaque client.
+        </p>
 
         {/* Boutons */}
         <div className="flex flex-col gap-4 sm:flex-row">

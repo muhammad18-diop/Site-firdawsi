@@ -50,7 +50,7 @@ function Temoignages() {
                 <span className="h-px w-8 bg-sky-500" />
               </span>
 
-              <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
+              <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#123B5D] sm:text-4xl lg:text-5xl">
                 La confiance au cœur de{" "}
                 <span className="text-sky-600">nos relations.</span>
               </h2>
@@ -73,7 +73,7 @@ function Temoignages() {
                       <Icon size={28} strokeWidth={1.8} />
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#071D30]">
+                    <h3 className="text-xl font-bold text-[#123B5D]">
                       {item.titre}
                     </h3>
 
@@ -89,7 +89,7 @@ function Temoignages() {
             <div className="mt-16 text-center">
               <a
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-lg bg-[#071D30] px-8 py-4 text-sm font-bold text-white transition hover:bg-sky-700"
+                className="inline-flex items-center gap-3 rounded-lg bg-[#123B5D] px-8 py-4 text-sm font-bold text-white transition hover:bg-sky-700"
               >
                 Parlons de votre projet
                 <ArrowRight size={18} />
