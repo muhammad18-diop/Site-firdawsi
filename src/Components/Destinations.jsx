@@ -173,9 +173,7 @@ function NosDestinations() {
               <div key={region.nom}>
                 <h4 className="mb-6 flex items-center justify-between border-b border-gray-200 pb-4 text-lg font-bold text-[#071D30]">
                   {region.nom}
-                  <span className="text-sm font-medium text-gray-400">
-                    {String(region.pays.length).padStart(2, "0")}
-                  </span>
+                 
                 </h4>
 
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-5">
