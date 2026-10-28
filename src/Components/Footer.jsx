@@ -26,7 +26,7 @@ function Footer() {
   ];
 
   const expertises = [
-   "Services de Voyage et Billetterie",
+    "Services de Voyage et Billetterie",
     "Conseil et Transaction Immobilière",
     "Courtage et Solutions d'Assurance",
     "Accompagnement et Conseil aux Entreprises",
@@ -54,12 +54,16 @@ function Footer() {
     <footer className="bg-[#071D30] text-white">
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-
           {/* Identité de l'entreprise */}
           <div>
-            <Link to="/" className="inline-flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-sky-300/50 bg-white text-xl font-extrabold text-[#123B5D]">
-                FC
+            <Link to="/accueil" className="inline-flex items-center gap-3">
+              {/* Logo officiel */}
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center">
+                <img
+                  src="/firdawsi-bg.png"
+                  alt="Logo FIRDAWSI CONSULTING GROUP"
+                  className="h-full w-full object-contain"
+                />
               </div>
 
               <div>
@@ -74,9 +78,9 @@ function Footer() {
             </Link>
 
             <p className="mt-6 text-sm leading-7 text-gray-300">
-              Nous accompagnons les entreprises dans leurs projets
-              grâce à des solutions professionnelles adaptées à
-              leurs besoins et à leurs ambitions.
+              Des solutions professionnelles adaptées à vos besoins
+              dans les domaines du voyage, de l'immobilier, de
+              l'assurance et du conseil aux entreprises.
             </p>
 
             <p className="mt-4 text-xs font-medium uppercase leading-6 tracking-wider text-gray-400">
@@ -180,15 +184,26 @@ function Footer() {
                 />
 
                 <div>
-                  <p className="text-xs text-gray-400">
-                    Téléphone
-                  </p>
+                  <p className="text-xs text-gray-400">Téléphone</p>
 
                   <a
                     href={`tel:${contact.telephone.replace(/[^\d+]/g, "")}`}
                     className="mt-1 block text-sm text-gray-200 transition hover:text-sky-300"
                   >
                     {contact.telephone}
+                  </a>
+
+                  <a
+                    href={`https://wa.me/${contact.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm text-sky-300 transition hover:text-white"
+                  >
+                    Écrire sur WhatsApp
+                    <ArrowUpRight
+                      size={13}
+                      className="ml-1 inline-block"
+                    />
                   </a>
                 </div>
               </li>
@@ -200,9 +215,7 @@ function Footer() {
                 />
 
                 <div>
-                  <p className="text-xs text-gray-400">
-                    E-mail
-                  </p>
+                  <p className="text-xs text-gray-400">E-mail</p>
 
                   <a
                     href={`mailto:${contact.email}`}
@@ -220,7 +233,6 @@ function Footer() {
       {/* Barre inférieure */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 py-6 text-center sm:flex-row sm:text-left lg:px-8">
-
           <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} FIRDAWSI CONSULTING GROUP.
             Tous droits réservés.
