@@ -106,7 +106,7 @@ function Expertises() {
                   {/* Bouton commun conforme : "Découvrir le service"[cite: 1] */}
                   <a
                     href={expertise.link}
-                    className="mt-8 inline-flex items-center justify-between border-t border-gray-100 pt-5 font-semibold text-sky-700 transition group-hover:text-sky-500"
+                    className="mt-8 inline-flex items-center justify-between border-t border-gray-100 pt-5 font-semibold text-sky-600 transition group-hover:text-sky-500"
                   >
                     <span>Découvrir le service</span>
                     <ArrowRight
