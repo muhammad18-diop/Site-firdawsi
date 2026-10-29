@@ -194,11 +194,11 @@ function AssuranceItem({ assurance, index }) {
 
         {/* CONTENU */}
         <div className="py-2">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#123B5D]">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-sky-600">
             Nos solutions d’assurance
           </p>
 
-          <h2 className="mb-5 text-3xl font-bold leading-tight text-[#123B5D] sm:text-4xl">
+          <h2 className="mb-5 text-3xl font-bold leading-tight text-sky-600 sm:text-4xl">
             {assurance.titre}
           </h2>
 

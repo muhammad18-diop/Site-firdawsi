@@ -140,12 +140,12 @@ function ServiceImmobilier({ service, index }) {
         <div className="relative z-10">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-10 bg-sky-500" />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
               {service.categorie}
             </span>
           </div>
 
-          <h2 className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-4xl xl:text-[42px]">
+          <h2 className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-sky-600 sm:text-4xl xl:text-[42px]">
             {service.titre}
           </h2>
 

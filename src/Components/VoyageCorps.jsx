@@ -244,11 +244,11 @@ export default function VoyagesServices() {
                       : "lg:order-1 lg:translate-y-8"
                   }`}
                 >
-                  <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#123B5D]">
+                  <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
                     {service.categorie}
                   </span>
 
-                  <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-3xl lg:text-4xl">
+                  <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-sky-600 sm:text-3xl lg:text-4xl">
                     {service.titre}
                   </h3>
 
