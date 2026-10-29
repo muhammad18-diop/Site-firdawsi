@@ -10,11 +10,25 @@ import {
 
 const contacts = [
   {
-    title: "Téléphone",
+    title: "Téléphone 1",
     description: "Échangeons directement sur votre projet.",
     value: "+221 78 315 20 94",
     icon: Phone,
     href: "tel:+221783152094",
+  },
+  {
+    title: "Téléphone 2",
+    description: "Contactez-nous sur notre deuxième ligne.",
+    value: "+221 78 946 00 70",
+    icon: Phone,
+    href: "tel:+221789460070",
+  },
+  {
+    title: "Téléphone 3",
+    description: "Nous sommes également joignables sur cette ligne.",
+    value: "+221 76 148  48 23 ",
+    icon: Phone,
+    href: "tel:+221761484823 ",
   },
   {
     title: "WhatsApp",
