@@ -15,10 +15,12 @@ import ConfidentialitePage from './Pages/Confidentialite'
 import Voyage from './Pages/Voyage'
 import ImmobilierPage from './Pages/Immobilier'
 import Assistance from './Pages/Assisatance'
+import WhatsAppButton from './Components/WathsappButton'
 
 function App() {
   return (
-    <Routes>
+    <div>
+      <Routes>
       <Route path="/" element={<Welcome />} />
       <Route path="/accueil" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -33,6 +35,8 @@ function App() {
       <Route path="/services/immobilier" element={<ImmobilierPage/>} />
       <Route path="/services/assurance" element={<  Assistance/>} />
     </Routes>
+    <WhatsAppButton/>
+    </div>
   )
 }
 
