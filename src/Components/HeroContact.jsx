@@ -88,7 +88,7 @@ function HeroContact() {
               Contactez-nous
             </p>
 
-            <h1 className="mb-6 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl xl:text-7xl">
+            <h1 className="mb-6 max-w-3xl font-['Calibri',sans-serif] text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl xl:text-7xl">
               Parlons de votre
               <span className="block text-sky-400">
                 prochain projet.

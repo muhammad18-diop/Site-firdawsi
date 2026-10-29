@@ -92,7 +92,7 @@ function HeroFAQ() {
         </p>
 
         {/* Titre principal */}
-        <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
+        <h1 className="mb-6 max-w-4xl font-['Calibri',sans-serif] text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
           Vous avez des questions ?
           <span className="block text-sky-400">
             Nous avons les réponses.

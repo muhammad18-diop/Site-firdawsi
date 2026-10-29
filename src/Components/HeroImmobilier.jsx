@@ -119,7 +119,7 @@ export default function HeroImmobilier() {
           Nos services immobiliers
         </p>
 
-        <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
+        <h1 className="mb-6 max-w-4xl font-['Calibri',sans-serif] text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
           Votre projet immobilier commence{" "}
           <span className="text-sky-400">ici.</span>
         </h1>

@@ -80,7 +80,7 @@ export default function HeroTemoignages() {
           La confiance au cœur de nos relations
         </p>
 
-        <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
+        <h1 className="mb-6 max-w-4xl font-['Calibri',sans-serif] text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
           Vos expériences,
           <span className="block text-sky-400">
             notre plus belle référence.

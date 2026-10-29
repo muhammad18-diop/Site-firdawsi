@@ -79,7 +79,7 @@ function HeroApropos() {
           Qui sommes-nous ?
         </p>
 
-        <h1 className="mb-6 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
+        <h1 className="mb-6 max-w-4xl text-4xl font-['Calibri',sans-serif] font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
           FIRDAWSI CONSULTING GROUP, l’excellence au cœur de vos besoins.
         </h1>
 
