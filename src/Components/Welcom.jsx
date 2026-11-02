@@ -36,7 +36,7 @@ export default function Welcome() {
           loop
           playsInline
           preload="auto"
-          poster="https://unsplash.com/fr/photos/un-avion-commercial-volant-a-travers-des-nuages-duveteux-7gJyHcCStT0"
+          poster="/avion.jpg"
           className="absolute inset-0 h-full w-full object-cover object-center"
           aria-hidden="true"
         >
