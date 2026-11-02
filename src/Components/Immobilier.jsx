@@ -120,9 +120,10 @@ function Immobilier() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
         <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-600 sm:text-sm">
-              Prestations disponibles
-            </span>
+            <span className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-sky-600 sm:text-sm">
+            <span className="h-px w-9 bg-sky-500" />
+            Prestation disponible
+          </span>
 
             <h3 className="mt-3 text-3xl font-bold tracking-tight text-[#123B5D] sm:text-4xl">
               Des solutions immobilières adaptées
@@ -183,9 +184,10 @@ function Immobilier() {
       <div className="bg-slate-50">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:px-10 lg:py-24">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-600 sm:text-sm">
-              Transparence & Sérénité
-            </span>
+            <span className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-sky-600 sm:text-sm">
+            <span className="h-px w-9 bg-sky-500" />
+           Transparence &  Sérénité
+          </span>
 
             <h3 className="mt-4 max-w-xl text-3xl font-bold leading-tight text-[#123B5D] sm:text-4xl">
               Chaque projet mérite une attention particulière.
