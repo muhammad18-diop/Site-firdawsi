@@ -89,9 +89,9 @@ function HeroContact() {
             </p>
 
             <h1 className="mb-6 max-w-3xl font-manrope text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl xl:text-7xl">
-              Parlons de votre
+              Parlons de votre  prochain projet.
               <span className="block text-sky-400">
-                prochain projet.
+               
               </span>
             </h1>
 

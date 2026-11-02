@@ -80,7 +80,7 @@ function HeroApropos() {
         </p>
 
         <h1 className="mb-6 max-w-4xl text-4xl font-manrope font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
-          FIRDAWSI CONSULTING GROUP, l’excellence au cœur de vos besoins.
+          Firdawsi Consulting Group, l’excellence au cœur de vos besoins.
         </h1>
 
         {/* Présentation de l'entreprise */}

@@ -120,8 +120,8 @@ export default function HeroVoyages() {
         </p>
 
         <h1 className="mb-6 max-w-4xl  font-manrope text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
-          Votre prochain voyage commence{" "}
-          <span className="text-sky-400">ici.</span>
+          Votre prochain voyage commence ici.{" "}
+          <span className="text-sky-400"></span>
         </h1>
 
         <p className="mb-8 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">

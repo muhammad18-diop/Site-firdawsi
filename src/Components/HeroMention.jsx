@@ -82,8 +82,8 @@ function HeroMentionsLegales() {
         </p>
 
         <h1 className="mb-6 max-w-4xl font-manrope text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
-          Mentions légales et{" "}
-          <span className="text-sky-400">informations du site.</span>
+          Mentions légales et informations du site.{" "}
+          <span className="text-sky-400"></span>
         </h1>
 
         <p className="mb-8 max-w-2xl text-base leading-8 text-gray-200 md:text-lg">

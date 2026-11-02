@@ -132,9 +132,9 @@ function HeroAssistance() {
         </p>
 
         <h1 className="mb-6 max-w-4xl text-4xl  font-manrope font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
-          Protégez ce qui compte
+          Protégez ce qui compte   pour vous.
           <span className="block text-sky-400">
-            pour vous.
+          
           </span>
         </h1>
 

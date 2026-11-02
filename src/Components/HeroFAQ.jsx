@@ -94,7 +94,7 @@ function HeroFAQ() {
         {/* Titre principal */}
         <h1 className="mb-6 max-w-4xl font-manrope text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
           Vous avez des questions ?
-          <span className="block text-sky-400">
+          <span className="block text-white font-extrabold">
             Nous avons les réponses.
           </span>
         </h1>

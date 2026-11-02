@@ -85,10 +85,10 @@ function HeroConfidentialite() {
         </p>
 
         <h1 className="mb-6 max-w-4xl font-manrope text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
-          Votre confidentialité,
+          Votre confidentialité, notre engagement.
           <br />
           <span className="text-sky-400">
-            notre engagement.
+            
           </span>
         </h1>
 
