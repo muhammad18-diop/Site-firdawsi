@@ -20,7 +20,7 @@ const destinations = [
     name: "Dakar",
     location: "Dakar, Sénégal",
     image:
-      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1400&q=85",
+      "/MONUMENT.jpg",
     description:
       "Entre patrimoine, culture et littoral, Dakar offre une première découverte de la diversité sénégalaise.",
   },
@@ -44,7 +44,7 @@ const destinations = [
     name: "Saly",
     location: "Petite Côte, Sénégal",
     image:
-      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=85",
+      "/Saly.jpg",
     description:
       "Saly séduit par son littoral, ses plages et ses nombreuses possibilités de détente et d’activités nautiques.",
   },
@@ -135,7 +135,7 @@ Les outils numériques facilitent également la comparaison des transports et la
     category: "Destinations",
     date: "Guide destination",
     readTime: "5 min",
-    title: "Sénégal : cinq destinations à découvrir autrement",
+    title: "Sénégal : des destinations à découvrir autrement",
     excerpt:
       "De Dakar à Saint-Louis, en passant par Gorée, le Sine-Saloum et la Casamance, découvrez la diversité du pays.",
     image:
