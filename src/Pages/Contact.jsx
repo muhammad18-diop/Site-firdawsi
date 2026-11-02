@@ -1,4 +1,6 @@
 
+
+import { useEffect } from "react"
 import Navbar from "../Components/Navbar";   
 import HeroContact from "../Components/HeroContact"; 
 import CoordonneesContact from "../Components/CoordonneeContact"; 
@@ -7,6 +9,9 @@ import LocalisationContact from "../Components/LocalisationContact";
 import Footer from "../Components/Footer"; 
 
 function Contact(){
+      useEffect(() => {
+        document.title = " Contact - Firdawsi Consulting Group"  ;
+      }, []);
 
     return(
         <div>

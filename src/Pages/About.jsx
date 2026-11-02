@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import HeroApropos from "../Components/HeroApropos";
 import Navbar from "../Components/Navbar";
 import NotreHistoire from "../Components/Histoire";
@@ -9,6 +10,9 @@ import Footer from "../Components/Footer";
 import AboutCorps from "../Components/CorpsAbout";
 
 function About() {  
+      useEffect(() => {
+        document.title = " A Propos - Firdawsi Consulting Group"  ;
+      }, []);
 
     return (
         <div>

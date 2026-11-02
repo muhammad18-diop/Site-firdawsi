@@ -34,18 +34,19 @@ function Footer() {
 
   const socialLinks = [
     {
-      nom: "LinkedIn",
-      lien: "https://www.linkedin.com/",
-      symbole: "in",
+      nom: "Facebook",
+      lien: "https://www.facebook.com/profile.php?id=61569211192465",
+      symbole: "f",
     },
+   
     {
       nom: "TikTok",
-      lien: "https://www.tiktok.com/",
+      lien: "https://www.tiktok.com/@its_firdawsi?_r=1&_t=ZS-9B4dWxxD6ZC",
       symbole: "♪",
     },
     {
       nom: "Instagram",
-      lien: "https://www.instagram.com/",
+      lien: "https://www.instagram.com/firdawsi_consulting_group?rpxt=MXczOG05b2NzdTNzdg%3D%3D&utm_source=qr",
       symbole: "IG",
     },
   ];
@@ -54,17 +55,18 @@ function Footer() {
     <footer className="bg-[#071D30] text-white">
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+
           {/* Identité de l'entreprise */}
           <div>
             <Link to="/accueil" className="inline-flex items-center gap-3">
               {/* Logo officiel */}
               <div className="flex h-20 w-20 shrink-0 items-center justify-center">
-  <img
-    src="/firdawsi-bg.png"
-    alt="Logo FIRDAWSI CONSULTING GROUP"
-    className="h-full w-full object-contain"
-  />
-</div>
+                <img
+                  src="/firdawsi-bg.png"
+                  alt="Logo FIRDAWSI CONSULTING GROUP"
+                  className="h-full w-full object-contain"
+                />
+              </div>
 
               <div>
                 <p className="text-lg font-bold tracking-wide">
@@ -99,7 +101,13 @@ function Footer() {
                   title={social.nom}
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-sm font-bold text-gray-300 transition duration-300 hover:border-sky-300 hover:bg-sky-300 hover:text-[#071D30]"
                 >
-                  {social.symbole}
+                  {social.nom === "Facebook" ? (
+                    <span className="text-xl font-extrabold">
+                      f
+                    </span>
+                  ) : (
+                    social.symbole
+                  )}
                 </a>
               ))}
             </div>

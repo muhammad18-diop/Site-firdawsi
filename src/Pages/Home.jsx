@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Navbar from "../Components/Navbar";
 import HeroHome from "../Components/HeroSection";
 import Expertises from "../Components/Expertise";
@@ -11,6 +13,9 @@ import CTAContact from "../Components/CTAContact";
 import Footer from "../Components/Footer";
 
 function Home() {
+     useEffect(() => {
+    document.title = " Accueil - Firdawsi Consulting Group"  ;
+  }, []);
   return (
     <div>
       <Navbar />
