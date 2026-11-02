@@ -20,7 +20,7 @@ const destinations = [
     name: "Dakar",
     location: "Dakar, Sénégal",
     image:
-      "/MONUMENT.jpg",
+      "MONUMENT.jpg",
     description:
       "Entre patrimoine, culture et littoral, Dakar offre une première découverte de la diversité sénégalaise.",
   },
