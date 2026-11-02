@@ -36,7 +36,7 @@ export default function Welcome() {
           loop
           playsInline
           preload="auto"
-          poster="/avion.jpg"
+          
           className="absolute inset-0 h-full w-full object-cover object-center"
           aria-hidden="true"
         >
