@@ -56,7 +56,7 @@ function Temoignages() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                La satisfaction de nos clients repose sur un accompagnement éthique, une écoute bienveillante et la recherche constante de solutions adaptées[cite: 1].
+                La satisfaction de nos clients repose sur un accompagnement éthique, une écoute bienveillante et la recherche constante de solutions adaptées.
               </p>
             </div>
 
