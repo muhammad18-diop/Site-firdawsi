@@ -122,14 +122,17 @@ function AssuranceBiens() {
         {/* Types d'assurance */}
         <div className="mt-16">
           <div className="mb-8">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
-              Nos domaines de couverture
-            </p>
+  <div className="mb-3 flex items-center gap-3">
+    <span className="h-px w-10 bg-sky-500" />
+    <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
+      Nos domaines de couverture
+    </p>
+  </div>
 
-            <h3 className="text-2xl font-bold text-[#123B5D] md:text-3xl">
-              Des solutions pour différents types de biens
-            </h3>
-          </div>
+  <h3 className="text-2xl font-bold text-[#123B5D] md:text-3xl">
+    Des solutions pour différents types de biens
+  </h3>
+</div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {assurances.map((assurance) => {
