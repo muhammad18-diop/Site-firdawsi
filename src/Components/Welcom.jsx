@@ -61,7 +61,7 @@ export default function Welcome() {
           </p>
 
           {/* Nom de l'entreprise */}
-          <h1 className="text-4xl font-semibold tracking-[0.12em] sm:text-6xl md:text-7xl">
+          <h1 className="text-4xl font-extrabold  font-manrope tracking-[0.12em] sm:text-6xl md:text-7xl">
             FIRDAWSI
             <span className="mt-3 block text-2xl font-semibold tracking-[0.16em] sm:text-4xl md:text-5xl">
               CONSULTING GROUP
