@@ -146,7 +146,7 @@ export default function VoyagesServices() {
       {/* INTRODUCTION */}
       <section className="px-6 pb-14 pt-10 sm:pb-16 sm:pt-14 lg:px-10">
         <div className="mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#123B5D]">
+          <span className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
             <span className="h-px w-8 bg-sky-600" />
             Nos services de voyage
             <span className="h-px w-8 bg-sky-600" />
@@ -244,11 +244,15 @@ export default function VoyagesServices() {
                       : "lg:order-1 lg:translate-y-8"
                   }`}
                 >
-                  <span className="text-sm font-bold uppercase tracking-[0.2em] text-sky-600">
-                    {service.categorie}
-                  </span>
+                    
+                  <div className="mb-5 flex items-center gap-3">
+                     <span className="h-px w-10 bg-sky-500" />
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
+                      {service.categorie}
+                    </span>
+                </div>
 
-                  <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-sky-600 sm:text-3xl lg:text-4xl">
+                  <h3 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-[#123B5D] sm:text-3xl lg:text-4xl">
                     {service.titre}
                   </h3>
 

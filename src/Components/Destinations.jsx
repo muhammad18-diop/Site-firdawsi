@@ -76,7 +76,7 @@ function NosDestinations() {
           <div>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-sky-500" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#123B5D]">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-sky-500">
                 Une ouverture sur le monde
               </span>
             </div>
@@ -152,7 +152,7 @@ function NosDestinations() {
             <div>
               <div className="mb-4 flex items-center gap-3">
                 <Globe2 size={19} className="text-sky-600" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#123B5D]">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
                   Notre couverture géographique
                 </span>
               </div>

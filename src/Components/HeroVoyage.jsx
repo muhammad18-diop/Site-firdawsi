@@ -119,13 +119,13 @@ export default function HeroVoyages() {
           Nos services de voyage
         </p>
 
-        <h1 className="mb-6 max-w-4xl font-['Calibri',sans-serif] text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
+        <h1 className="mb-6 max-w-4xl font-['Poppins',sans-serif] text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl xl:text-7xl">
           Votre prochain voyage commence{" "}
           <span className="text-sky-400">ici.</span>
         </h1>
 
         <p className="mb-8 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
-          De la préparation de votre visa à la réservation de votre séjour,
+          De la préparation de votre demande de visa à la réservation de votre séjour,
           FIRDAWSI CONSULTING GROUP vous accompagne dans vos projets de voyage,
           d’études à l’étranger et de pèlerinage.
         </p>

@@ -44,7 +44,7 @@ function Temoignages() {
         {!HAS_VERIFIED_REVIEWS ? (
           <div>
             <div className="mx-auto max-w-3xl text-center">
-              <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-sky-700 sm:text-sm">
+              <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-sky-600 sm:text-sm">
                 <span className="h-px w-8 bg-sky-500" />
                 Notre Engagement
                 <span className="h-px w-8 bg-sky-500" />

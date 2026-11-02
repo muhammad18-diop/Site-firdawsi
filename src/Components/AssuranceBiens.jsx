@@ -50,7 +50,7 @@ function AssuranceBiens() {
           <div>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-sky-500" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#123B5D]">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-sky-500">
                 Protection & sérénité
               </span>
             </div>
@@ -62,7 +62,7 @@ function AssuranceBiens() {
           </div>
 
           <p className="max-w-xl text-base leading-8 text-gray-600 lg:justify-self-end md:text-lg">
-            Vos biens représentent une valeur importante. FIRDAWSI CONSULTING GROUP vous oriente vers des solutions d’assurance adaptées à votre situation et aux garanties disponibles[cite: 1].
+            Vos biens représentent une valeur importante. FIRDAWSI CONSULTING GROUP vous oriente vers des solutions d’assurance adaptées à votre situation et aux garanties disponibles.
           </p>
         </div>
 

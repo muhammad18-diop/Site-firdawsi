@@ -130,7 +130,7 @@ function Immobilier() {
           </div>
 
           <p className="max-w-lg leading-7 text-slate-600">
-            Un accompagnement réaliste qui tient compte de votre situation, de vos objectifs et des biens disponibles[cite: 1].
+            Un accompagnement réaliste qui tient compte de votre situation, de vos objectifs et des biens disponibles.
           </p>
         </div>
 
@@ -192,7 +192,7 @@ function Immobilier() {
             </h3>
 
             <p className="mt-5 max-w-xl leading-8 text-slate-600">
-              Notre rôle est de vous guider à travers des informations claires et de vous proposer des options documentées correspondant à vos exigences[cite: 1].
+              Notre rôle est de vous guider à travers des informations claires et de vous proposer des options documentées correspondant à vos exigences.
             </p>
 
             <a

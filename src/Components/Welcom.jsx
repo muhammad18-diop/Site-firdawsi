@@ -29,12 +29,20 @@ export default function Welcome() {
     <main className="relative min-h-screen overflow-hidden bg-[#071B3A] text-white">
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
 
-        {/* Image d'avion en arrière-plan */}
-        <img
-  src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2000&q=85"
-  alt="Avion commercial pour FIRDAWSI CONSULTING GROUP"
-  className="absolute inset-0 h-full w-full object-cover object-center"
-/>
+        {/* Vidéo d'avion en arrière-plan */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="https://unsplash.com/fr/photos/un-avion-commercial-volant-a-travers-des-nuages-duveteux-7gJyHcCStT0"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          aria-hidden="true"
+        >
+          <source src="/videos/video.mp4" type="video/mp4" />
+          Votre navigateur ne prend pas en charge les vidéos.
+        </video>
 
         {/* Superposition sombre pour la lisibilité */}
         <div className="absolute inset-0 bg-[#071B3A]/65" />

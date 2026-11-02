@@ -41,7 +41,7 @@ function Actualites() {
           <div>
             <div className="mb-4 flex items-center gap-3">
               <span className="h-px w-10 bg-sky-500" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-blue-950">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-sky-600">
                 Informations & Conseils
               </span>
             </div>
@@ -52,7 +52,7 @@ function Actualites() {
           </div>
 
           <p className="max-w-md text-base leading-7 text-gray-600">
-            Retrouvez nos informations utiles, nos guides pratiques et l’actualité des services de FIRDAWSI CONSULTING GROUP[cite: 1].
+            Retrouvez nos informations utiles, nos guides pratiques et l’actualité des services de FIRDAWSI CONSULTING GROUP.
           </p>
         </div>
 

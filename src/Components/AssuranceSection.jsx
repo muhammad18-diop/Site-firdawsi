@@ -198,7 +198,7 @@ function AssuranceItem({ assurance, index }) {
             Nos solutions d’assurance
           </p>
 
-          <h2 className="mb-5 text-3xl font-bold leading-tight text-sky-600 sm:text-4xl">
+          <h2 className="mb-5 text-3xl font-bold leading-tight text-[#123B5D] sm:text-4xl">
             {assurance.titre}
           </h2>
 
@@ -257,7 +257,7 @@ export default function AssuranceServices() {
         className="px-5 py-12 sm:px-8 sm:py-16 lg:py-20"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#123B5D]">
+          <div className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-sky-600">
             <span className="h-px w-8 bg-sky-600" />
             Nos domaines d’assurance
           </div>

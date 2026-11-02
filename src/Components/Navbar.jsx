@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -19,7 +18,7 @@ export default function Navbar() {
   const fermerMenu = () => setMenuOpen(false);
 
   const classeLien = ({ isActive }) =>
-    `relative whitespace-nowrap py-2 text-sm font-semibold transition-colors duration-200 ${
+    `relative whitespace-nowrap py-2 text-base font-semibold transition-colors duration-200 ${
       isActive
         ? "text-sky-600"
         : "text-[#123B5D] hover:text-sky-600"
@@ -27,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-blue-100 bg-white/95 shadow-sm backdrop-blur-md">
-      <div className="mx-auto flex max-w-screen-2xl items-center justify-between gap-3 px-4 py-1.5 lg:px-10">
+      <div className="mx-auto flex max-w-screen-2xl items-center justify-between gap-3 px-4 py-2 lg:px-10">
 
         {/* LOGO */}
         <Link
@@ -44,7 +43,7 @@ export default function Navbar() {
         </Link>
 
         {/* NAVIGATION DESKTOP */}
-        <div className="hidden items-center gap-5 lg:flex xl:gap-7">
+        <div className="hidden items-center gap-6 lg:flex xl:gap-8">
           {liensNavigation.map((lien) => (
             <NavLink
               key={lien.chemin}
@@ -66,21 +65,21 @@ export default function Navbar() {
         {/* BOUTON CONTACT DESKTOP */}
         <Link
           to="/contact"
-          className="hidden shrink-0 items-center gap-2 rounded-lg bg-sky-600 px-3 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-sky-700 sm:inline-flex"
+          className="hidden shrink-0 items-center gap-2 rounded-lg bg-sky-600 px-4 py-2.5 text-base font-semibold text-white transition duration-200 hover:bg-sky-700 sm:inline-flex"
         >
           Nous contacter
-          <ArrowRight size={16} />
+          <ArrowRight size={18} />
         </Link>
 
         {/* BOUTON MENU MOBILE */}
         <button
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
-          className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-blue-100 text-[#123B5D] transition hover:bg-blue-50 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-blue-100 text-[#123B5D] transition hover:bg-blue-50 lg:hidden"
           aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={menuOpen}
         >
-          {menuOpen ? <X size={21} /> : <Menu size={21} />}
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -92,14 +91,14 @@ export default function Navbar() {
             : "max-h-0 border-t-0 opacity-0"
         }`}
       >
-        <div className="space-y-1 px-4 py-3">
+        <div className="space-y-1.5 px-4 py-4">
           {liensNavigation.map((lien) => (
             <NavLink
               key={lien.chemin}
               to={lien.chemin}
               onClick={fermerMenu}
               className={({ isActive }) =>
-                `block rounded-lg px-4 py-2.5 text-sm font-semibold transition ${
+                `block rounded-lg px-4 py-3 text-base font-semibold transition ${
                   isActive
                     ? "bg-blue-50 text-sky-600"
                     : "text-[#123B5D] hover:bg-blue-50 hover:text-sky-600"
@@ -114,10 +113,10 @@ export default function Navbar() {
           <Link
             to="/contact"
             onClick={fermerMenu}
-            className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-700"
+            className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-sky-600 px-4 py-3 text-base font-semibold text-white transition hover:bg-sky-700"
           >
             Nous contacter
-            <ArrowRight size={16} />
+            <ArrowRight size={18} />
           </Link>
         </div>
       </div>
