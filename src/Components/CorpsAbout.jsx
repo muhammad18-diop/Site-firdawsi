@@ -66,7 +66,7 @@ const domains = [
     image:
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=85",
     icon: Plane,
-    link: "services/voyages",
+    link: "/services/voyages",
     number: "01",
   },
   {
@@ -76,7 +76,7 @@ const domains = [
     image:
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=85",
     icon: House,
-    link: "services/immobilier",
+    link: "/services/immobilier",
     number: "02",
   },
   {
@@ -86,7 +86,7 @@ const domains = [
     image:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=85",
     icon: BriefcaseBusiness,
-    link: "services/assurance",
+    link: "/services/assurance",
     number: "03",
   },
 ];
