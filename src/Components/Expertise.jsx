@@ -11,7 +11,7 @@ const expertises = [
     couleur: "bg-sky-50 text-sky-700",
     image:
       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=85",
-    link: "/services#voyages",
+    link: "/services",
   },
   {
     numero: "02",
@@ -21,7 +21,7 @@ const expertises = [
     couleur: "bg-blue-50 text-blue-800",
     image:
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85",
-    link: "/services#immobilier",
+    link: "/services",
   },
   {
     numero: "03",
@@ -31,7 +31,7 @@ const expertises = [
     couleur: "bg-cyan-50 text-cyan-800",
     image:
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=85",
-    link: "/services#assurance",
+    link: "/services",
   },
 ];
 
