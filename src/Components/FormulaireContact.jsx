@@ -384,7 +384,7 @@ export default function FormulaireContact() {
                   <p className={errorClass}>{errors.telephone}</p>
                 ) : (
                   <p className="mt-1.5 text-xs text-slate-400">
-                    9 à 15 chiffres, sans espaces ni symboles.
+                    
                   </p>
                 )}
               </div>
