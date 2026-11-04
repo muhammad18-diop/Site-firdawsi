@@ -163,7 +163,7 @@ function Immobilier() {
                 </p>
 
                 <a
-                  href="/services/immobiliers"
+                  href="/services/immobilier"
                   className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-sky-700 transition hover:text-[#071D30]"
                 >
                   Demander une information
