@@ -13,7 +13,7 @@ function Footer() {
   const contact = {
     telephone: "+221 78 315 20 94",
     whatsapp: "221783152094",
-    email: "firdawsic@gmail.com",
+    email: "mbs-ceo@firdawsi-consulting-group.com",
     adresse: "Dakar, Sénégal",
   };
 

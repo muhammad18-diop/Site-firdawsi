@@ -40,9 +40,9 @@ const contacts = [
   {
     title: "E-mail",
     description: "Transmettez-nous votre demande par écrit.",
-    value: "firdawsicg@gmail.com",
+    value: "mbs-ceo@firdawsi-consulting-group.com",
     icon: Mail,
-    href: "mailto:firdawsicg@gmail.com",
+    href: "mailto:mbs-ceo@firdawsi-consulting-group.com",
   },
 ];
 
