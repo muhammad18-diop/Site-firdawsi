@@ -14,7 +14,7 @@ function CTAContact() {
   const contact = {
     telephone: "+221 78 315 20 94",
     whatsapp: "221783152094",
-    adresse: "Dakar, Sénégal",
+    adresse: "Zac Mbao, Rond point Sipress",
     horaires: "Lundi – Vendredi : 09h00 – 18h00",
   };
 

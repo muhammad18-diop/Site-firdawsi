@@ -26,9 +26,9 @@ const contacts = [
   {
     title: "Téléphone 3",
     description: "Nous sommes également joignables sur cette ligne.",
-    value: "+221 76 148  48 23 ",
+    value: "+221 76 149  48 23 ",
     icon: Phone,
-    href: "tel:+221761484823 ",
+    href: "tel:+221761494823 ",
   },
   {
     title: "WhatsApp",
