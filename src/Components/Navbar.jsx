@@ -38,7 +38,7 @@ export default function Navbar() {
           <img
             src="/firdawsi-bg.png"
             alt="Logo Firdawsi Consulting Group"
-            className="h-16 w-20 object-contain sm:h-[4.5rem] sm:w-24"
+            className="h-20 w-28 object-contain sm:h-[4.5rem] sm:w-24"
           />
         </Link>
 
